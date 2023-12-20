@@ -1,0 +1,92 @@
+// Fonts Import
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/../fonts/FiraSans-Bold.woff2') format('woff2'),
+        url('../fonts/FiraSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSans-Black.woff2') format('woff2'),
+        url('../fonts/FiraSans-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    src: url('../fonts/FiraSansCondensed-ExtraBold.woff2') format('woff2'),
+        url('../fonts/FiraSansCondensed-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Sans Extra Condensed';
+    src: url('../fonts/FiraSansExtraCondensed-Bold.woff2') format('woff2'),
+        url('../fonts/FiraSansExtraCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Sans Extra Condensed';
+    src: url('../fonts/FiraSansExtraCondensed-Medium.woff2') format('woff2'),
+        url('../fonts/FiraSansExtraCondensed-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Sans Extra Condensed';
+    src: url('../fonts/FiraSansExtraCondensed-Regular.woff2') format('woff2'),
+        url('../fonts/FiraSansExtraCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/FiraSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSans-Medium.woff2') format('woff2'),
+        url('../fonts/FiraSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Sans Extra Condensed';
+    src: url('../fonts/FiraSansExtraCondensed-SemiBold.woff2') format('woff2'),
+        url('../fonts/FiraSansExtraCondensed-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSans-Regular.woff2') format('woff2'),
+        url('../fonts/FiraSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

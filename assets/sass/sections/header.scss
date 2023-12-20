@@ -1,0 +1,169 @@
+// Header Styles
+
+.header {
+    padding-top: 0.56rem;
+    width: 100%;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    &__top {
+        margin-bottom: 1.25rem;
+        justify-content: space-between;
+
+        & > *:not(:first-child) {
+            align-self: flex-start;
+        }
+    }
+
+    &__top-section {
+
+        &_soc-links {
+            align-items: center;
+            gap: 1.56rem;
+        }
+    }
+
+    &__soc-link {
+        @extend %icon-btn;
+        @include size(1.875rem);
+    }
+
+    &__top-list {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    &__top-list-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__top-list-item:not(:last-child) {
+
+        &::after {
+            content: "|";
+            @extend %text-color-default-2;
+            font-size: 1.375rem;
+            display: inline-block;
+        }
+    }
+
+    &__top-list-link {
+        @extend %text-color-default-2;
+        font-size: 1.375rem;
+    }
+
+    &__middle {
+        margin-bottom: 2.5rem;
+        justify-content: space-between;
+    }
+
+    &__middle-section {
+
+        &_soc-links {
+            gap: 2.31rem;
+        }
+    }
+
+    &__middle-list {
+        gap: 1.44rem;
+    }
+
+    &__active-link-wrapper {
+        position: relative;
+    }
+
+    &__active-link-pop-up {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        color: $purple9;
+        font-size: 1.25rem;
+        font-weight: $bold;
+        background: $gray2;
+        border: 3px $primaryColor solid;
+        padding: 0.2rem 0.3rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+        box-shadow: 1px 1px 4px rgba(255, 0, 229, 0.50);
+    }
+
+    &__middle-list-link {
+        @extend %text-color-default-1;
+        @extend %icon-text;
+        @include size(1.875rem);
+        font-family: $thirdFont;
+        font-size: 2.0625rem;
+        font-weight: $medium;
+        letter-spacing: 0.04125rem;
+
+        &_active {
+            padding: 0.8rem 2.38rem;
+            border-radius: 2.5rem;
+            border: 1px solid var(--STROKE, rgba(255, 255, 255, 0.05));
+            background: radial-gradient(258.07% 104.86% at 15.66% 38.53%, rgba(0, 240, 255, 0.85) 0%, rgba(0, 240, 255, 0.00) 37.59%), radial-gradient(161.74% 66.02% at 84.34% 66.06%, rgba(255, 0, 230, 0.85) 0%, rgba(255, 80, 237, 0.85) 0.01%, rgba(255, 0, 230, 0.00) 76.06%), linear-gradient(276deg, #0030AC 2.96%, #6800CF 98.09%);
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15), 0px 3px 4px 0px rgba(255, 255, 255, 0.48) inset;
+
+            color: #FFF;
+            text-shadow: 
+            -0   -1.4px 0   $purple8,
+            0   -1.4px 0   $purple8,
+            -0    1.4px 0   $purple8,
+            0    1.4px 0   $purple8,
+            -1.4px -0   0   $purple8,
+            1.4px -0   0   $purple8,
+            -1.4px  0   0   $purple8,
+            1.4px  0   0   $purple8,
+            -1.4px -1.4px 0   $purple8,
+            1.4px -1.4px 0   $purple8,
+            -1.4px  1.4px 0   $purple8,
+            1.4px  1.4px 0   $purple8,
+            -1.4px -1.4px 0   $purple8,
+            1.4px -1.4px 0   $purple8,
+            -1.4px  1.4px 0   $purple8,
+            1.4px  1.4px 0   $purple8,
+            -1.4px -1.4px 0   $purple8,
+            1.4px -1.4px 0   $purple8,
+            -1.4px  1.4px 0   $purple8,
+            1.4px  1.4px 0   $purple8,
+            -1.4px -1.4px 0   $purple8,
+            1.4px -1.4px 0   $purple8,
+            -1.4px  1.4px 0   $purple8,
+            1.4px  1.4px 0   $purple8;
+        }
+
+        &_drop-down {
+            @include size(1.875rem);
+
+            &-active {
+                @extend %text-color-active-2;
+
+                &::after {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+    }
+
+    &__bottom-list {
+        gap: 3.69rem;
+        justify-content: space-between;
+    }
+
+    &__bottom-list-link {
+        @extend %text-color-default-2;
+        @extend %icon-text;
+        font-size: 1.375rem;
+        flex-direction: row-reverse;
+        gap: 0.62rem;
+    }
+}

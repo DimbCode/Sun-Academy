@@ -1,0 +1,91 @@
+// General Classes
+
+.container {
+    width: 100%;
+    max-width: calc($containerWidth + $containerPadding * 2);
+    padding: 0 $containerPadding;
+    margin: 0 auto;
+}
+
+.section-container {
+    width: 100%;
+    max-width: calc($sectionContainerWidth + $sectionContainerPadding * 2);
+    padding: 0 $sectionContainerPadding;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Text Examples
+
+%text-color-default-1 {
+    color: $primaryColor;
+    text-shadow: 1px 1px 4px $gray1;
+}
+
+%text-color-default-2 {
+    color: $purple5;
+    text-shadow: 1px 1px 2px $purple6;
+}
+
+%text-color-active-1 {
+    color: $purple1;
+    text-shadow: 1px 1px 9px $purple2;
+}
+
+%text-color-active-2 {
+    color: $purple3;
+    text-shadow: 1px 1px 5px $purple4;
+}
+
+%text-color-active-3 {
+    color: $purple3;
+    text-shadow: 1px 1px 4px $purple7;
+}
+
+// Logo Classes
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &::before {
+        content: "";
+        width: 50.3125rem;
+        height: 9.4375rem;
+        display: inline-block;
+        background-image: url("../images/logo.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+// Buttons Classes And Examples
+
+%icon-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    cursor: pointer;
+}
+
+%icon-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+@mixin size($size) {
+
+    &::after {
+        width: $size;
+        height: $size;
+    }
+    
+}

@@ -1,0 +1,106 @@
+// Icons Styles
+
+@mixin icon($url) {
+    &::after {
+        content: "";
+        width: 2.1875rem;
+        height: 2.1875rem;
+        background-image: url($url);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+    }
+}
+
+.ic-arrow-top {
+    @include icon("../images/arrow-top.svg");
+}
+
+.ic-book {
+    @include icon("../images/book.svg");
+}
+
+.ic-cart {
+    @include icon("../images/cart.svg");
+}
+
+.ic-drop-down {
+    @include icon("../images/drop-down.svg");
+}
+
+.ic-fill-heart {
+    @include icon("../images/fill-heart.svg");
+}
+
+.ic-fill-heart-2 {
+    @include icon("../images/fill-heart-2.svg");
+}
+
+.ic-filter {
+    @include icon("../images/filters.svg");
+}
+
+.ic-follow {
+    @include icon("../images/follow.svg");
+}
+
+.ic-hand {
+    @include icon("../images/hand.svg");
+}
+
+.ic-heart {
+    @include icon("../images/heart.svg");
+}
+
+.ic-in-yan {
+    @include icon("../images/in-yan.svg");
+}
+
+.ic-inst {
+    @include icon("../images/inst.svg");
+}
+
+.ic-message-2 {
+    @include icon("../images/message-2.svg");
+}
+
+.ic-message {
+    @include icon("../images/message.svg");
+}
+
+.ic-prise {
+    @include icon("../images/prise.svg");
+}
+
+.ic-question {
+    @include icon("../images/question.svg");
+}
+
+.ic-search-2 {
+    @include icon("../images/search-2.svg");
+}
+
+.ic-search {
+    @include icon("../images/search.svg");
+}
+
+.ic-stars {
+    @include icon("../images/stars.svg");
+}
+
+.ic-stick {
+    @include icon("../images/stick.svg");
+}
+
+.ic-tg {
+    @include icon("../images/tg.svg");
+}
+
+.ic-users {
+    @include icon("../images/users.svg");
+}
+
+.ic-vk {
+    @include icon("../images/vk.svg");
+}
