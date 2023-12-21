@@ -1,0 +1,71 @@
+// Side Panel Styles
+
+.side-panel {
+    width: 100%;
+    overflow: auto;
+    max-height: 83rem;
+    padding-right: 1.8rem;
+
+    &__link-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    &__link {
+        @extend %text-color-default-3;
+        @extend %icon-text;
+        gap: 0.75rem;
+        font-size: 1.8125rem;
+        font-weight: $medium;
+
+        &_drop-down {
+            width: 100%;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+                background-color: $white;
+                background-size: 1.5625rem;
+                border-radius: 50%;
+                border: 1px solid $purple11;
+                box-shadow: 1px 1px 5px $brown1;
+            }
+
+            &-active::after {
+                transform: translate(0, -50%) rotate(180deg);
+            }
+        }
+
+        &_current {
+            @extend %text-color-active-4;
+        }
+    }
+
+    &__link-lists {
+        margin-top: 1.19rem;
+
+        & > .side-panel__nested-list {
+            margin-left: 5.12rem;
+            margin-top: 0;
+        }
+    }
+
+    &__nested-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.94rem;
+        margin-left: 2.38rem;
+        margin-top: 0.94rem;
+    }
+
+    &__nested-list-link {
+        @extend %text-color-default-2;
+        font-size: 1.5625rem;
+        font-weight: $semibold;
+        line-height: 2rem;
+    }
+}

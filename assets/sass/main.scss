@@ -1,7 +1,6 @@
 // Imports Files
 
 @import "fonts.scss";
-@import "icons.scss";
 
 // Zeroing Out Files
 
@@ -10,6 +9,10 @@
 // Variables
 
 @import "variables.scss";
+
+// Icons Files
+
+@import "icons.scss";
 
 // Started Styles Files
 
@@ -22,3 +25,5 @@
 // Sections Files
 
 @import "sections/header.scss";
+@import "sections/side-panel.scss";
+@import "sections/home.scss";

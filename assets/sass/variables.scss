@@ -4,6 +4,8 @@ $primaryFont: "Fira Sans";
 $secondaryFont: "Fira Sans Condensed";
 $thirdFont: "Fira Sans Extra Condensed";
 
+$blackFont: 900;
+$extrabold: 800;
 $bold: 700;
 $semibold: 600;
 $medium: 500;
@@ -34,10 +36,23 @@ $purple8: rgba(238, 1, 214, 0.8);
 
 $purple9: #340076;
 
+$purple10: rgba(175, 0, 221, 0.55);
+
+$purple11: rgba(36, 0, 255, 0.45);
+
+$purple12: #3F008F;
+
+$pink1: #EAAEE4;
+$pink2: #FAE6F8;
+$pink3: rgba(234, 174, 228, 0.75);
+
+$brown1: #926A8E;
+$brown2: rgba(234, 174, 228, 0.35);
+
 // Container Variables
 
 $containerWidth: 144.375rem;
 $containerPadding: 0.94rem;
 
 $sectionContainerWidth: 100%;
-$sectionContainerPadding: 3.56rem;
+$sectionContainerPadding: 0px;

@@ -20,6 +20,10 @@
     align-items: center;
 }
 
+.none {
+    display: none !important;
+}
+
 // Text Examples
 
 %text-color-default-1 {
@@ -30,6 +34,32 @@
 %text-color-default-2 {
     color: $purple5;
     text-shadow: 1px 1px 2px $purple6;
+}
+
+%text-color-default-3 {
+    text-shadow: 0px 2px 2px $purple10;
+    background: linear-gradient(276deg, #0030AC 2.96%, #6800CF 98.09%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+%text-color-default-4 {
+    color: $purple5;
+    text-shadow: 1px 1px 4px $purple6;
+}
+
+%text-color-default-5 {
+    text-shadow: 2px 2px 4px $purple10;
+    background: linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+%text-color-default-6 {
+    color: $purple12;
+    text-shadow: 1px 1px 4px $purple7;
 }
 
 %text-color-active-1 {
@@ -44,6 +74,19 @@
 
 %text-color-active-3 {
     color: $purple3;
+    text-shadow: 1px 1px 4px $purple7;
+}
+
+%text-color-active-4 {
+    text-shadow: 0px 1px 8px $purple2;
+    background: linear-gradient(276deg, #8C007E 2.96%, #6800CF 98.09%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+%text-color-active-5 {
+    color: $purple5;
     text-shadow: 1px 1px 4px $purple7;
 }
 
@@ -88,4 +131,30 @@
         height: $size;
     }
     
+}
+
+%btn {
+    padding: 0.9rem 2.37rem;
+    @extend %icon-btn;
+    @extend %text-color-default-4;
+    font-size: 1.625rem;
+    letter-spacing: 0.0325rem;
+    flex-direction: row-reverse;
+    gap: 0.75rem;
+    background: $white;
+    border-radius: 4.375rem;
+    border: 1px solid $purple11;
+    box-shadow: 0px 2px 10px 0px $purple7;
+}
+
+%btn-quadro {
+    @extend %icon-btn;
+    @extend %text-color-default-4;
+    padding: 0.9rem 2.4rem;
+    font-size: 1.625rem;
+    letter-spacing: 0.0325rem;
+    gap: 0.75rem;
+    background: $white;
+    border-radius: 0.9375rem;
+    border: 1px solid $purple11;
 }

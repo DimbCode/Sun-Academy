@@ -1,5 +1,7 @@
 // Icons Styles
 
+// Mixins
+
 @mixin icon($url) {
     &::after {
         content: "";
@@ -12,6 +14,24 @@
         display: inline-block;
     }
 }
+
+@mixin color-icon($url, $size) {
+    &::before {
+        content: "";
+        width: calc($size + 0.62rem);
+        height: calc($size + 0.62rem);
+        background-color: $white;
+        background-image: url($url);
+        background-size: $size;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        box-shadow: 1px 1px 5px $pink1;
+        border-radius: 50%;
+    }
+}
+
+// Global Icons
 
 .ic-arrow-top {
     @include icon("../images/arrow-top.svg");
@@ -103,4 +123,54 @@
 
 .ic-vk {
     @include icon("../images/vk.svg");
+}
+
+// Side Panel Icons
+
+.aside-ic-1 {
+    @include color-icon("../images/side-panel-item-1.png", 3.4375rem);
+}
+
+.aside-ic-2 {
+    @include color-icon("../images/side-panel-item-2.png", 3.4375rem);
+}
+
+.aside-ic-3 {
+    @include color-icon("../images/side-panel-item-3.png", 3.4375rem);
+}
+
+.aside-ic-4 {
+    @include color-icon("../images/side-panel-item-4.png", 3.4375rem);
+}
+
+.aside-ic-5 {
+    @include color-icon("../images/side-panel-item-5.png", 3.4375rem);
+}
+
+.aside-ic-6 {
+    @include color-icon("../images/side-panel-item-6.png", 3.4375rem);
+}
+
+.aside-ic-7 {
+    @include color-icon("../images/side-panel-item-7.png", 3.4375rem);
+}
+
+.aside-ic-8 {
+    @include color-icon("../images/side-panel-item-8.png", 3.4375rem);
+}
+
+.aside-ic-9 {
+    @include color-icon("../images/side-panel-item-9.png", 3.4375rem);
+}
+
+.aside-ic-10 {
+    @include color-icon("../images/side-panel-item-10.png", 3.4375rem);
+}
+
+.aside-ic-11 {
+    @include color-icon("../images/side-panel-item-11.png", 3.4375rem);
+}
+
+.aside-ic-12 {
+    @include color-icon("../images/side-panel-item-12.png", 3.4375rem);
 }
