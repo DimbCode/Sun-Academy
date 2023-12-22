@@ -174,3 +174,41 @@
 .aside-ic-12 {
     @include color-icon("../images/side-panel-item-12.png", 3.4375rem);
 }
+
+// Modal Windows Icons
+
+.ic-ruble {
+    @include icon("../images/ruble.svg");
+}
+
+.ic-sphere {
+    @include icon("../images/sphere.svg");
+}
+
+.ic-hat {
+    @include icon("../images/hat.svg");
+}
+
+.ic-hands {
+    @include icon("../images/hands.svg");
+}
+
+.ic-waves {
+    @include icon("../images/wave.svg");
+}
+
+.ic-hand-2 {
+    @include icon("../images/hand-2.svg");
+}
+
+.ic-settings {
+    @include icon("../images/settings.svg");
+}
+
+.ic-skip {
+    @include icon("../images/skip.svg");
+}
+
+.ic-trash {
+    @include icon("../images/trash.svg");
+}

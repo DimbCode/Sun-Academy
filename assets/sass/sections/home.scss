@@ -64,6 +64,17 @@
     border-radius: 0.9375rem;
     box-shadow: 1px 1px 15px 0px $pink3;
     border: 1px solid $pink1;
+    position: relative;
+
+    &__section-wrapper {
+        position: relative;
+        cursor: pointer;
+
+        &:hover > .service__notify {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
 
     &__section {
 
@@ -134,11 +145,90 @@
     &__price {
         font-family: $thirdFont;
         font-size: 2.0625rem;
+        @extend %text-color-default-4;
     }
 
     &__cart-btn {
         font-family: $thirdFont;
         font-size: 1.75rem;
         font-weight: $semibold;
+        @extend %text-color-default-5;
+    }
+
+    &__icon-btn {
+        @include size(2.375rem);
+        position: relative;
+    }
+
+    &__icon-btn-text {
+        position: absolute;
+        top: 0.3rem;
+        left: 0.4rem;
+        font-size: 1.3125rem;
+        font-weight: $medium;
+    }
+
+    &__notify {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 2.94rem 0.94rem 1.44rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+        background: radial-gradient(50.01% 23.54% at 50% 21.2%, rgba(255, 255, 255, 0.60) 41.67%, rgba(255, 255, 255, 0.00) 100%), linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, #FFF 46.49%);
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s;
+    }
+
+    &__description {
+        font-size: 1.375rem;
+        font-weight: 500;
+        line-height: 1.625rem;
+    }
+
+    &__details-link {
+        @extend %btn;
+        font-size: 1.3125rem;
+    }
+
+    &__sale {
+        text-align: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: 1px solid #EAAEE4;
+        padding: 1.1875rem 0.75rem 1.25rem 0.8125rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.81rem;
+        z-index: 1;
+        border-radius: 0rem 0.9375rem;
+        background: $gray3;
+    }
+
+    &__current-price {
+        color: #F00;
+        text-shadow: 2px 2px 12px rgba(255, 255, 255, 0.50);
+        font-size: 1.875rem;
+        font-weight: $bold;
+        line-height: 1.5625rem;
+        display: inline-block;
+    }
+
+    &__last-price {
+        color: rgba(185, 0, 0, 0.80);
+        text-shadow: 1px 1px 4px rgba(130, 0, 233, 0.35);
+        font-family: $thirdFont;
+        font-size: 1.625rem;
+        text-decoration: line-through;
+        display: inline-block;
     }
 }

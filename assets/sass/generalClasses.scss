@@ -134,9 +134,9 @@
 }
 
 %btn {
-    padding: 0.9rem 2.37rem;
     @extend %icon-btn;
     @extend %text-color-default-4;
+    padding: 0.9rem 2.37rem;
     font-size: 1.625rem;
     letter-spacing: 0.0325rem;
     flex-direction: row-reverse;

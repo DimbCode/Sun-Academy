@@ -112,33 +112,32 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
             background: radial-gradient(258.07% 104.86% at 15.66% 38.53%, rgba(0, 240, 255, 0.85) 0%, rgba(0, 240, 255, 0.00) 37.59%), radial-gradient(161.74% 66.02% at 84.34% 66.06%, rgba(255, 0, 230, 0.85) 0%, rgba(255, 80, 237, 0.85) 0.01%, rgba(255, 0, 230, 0.00) 76.06%), linear-gradient(276deg, #0030AC 2.96%, #6800CF 98.09%);
             box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15), 0px 3px 4px 0px rgba(255, 255, 255, 0.48) inset;
-
-            color: #FFF;
+            color: $white;
             text-shadow: 
-            -0   -1.4px 0   $purple8,
-            0   -1.4px 0   $purple8,
-            -0    1.4px 0   $purple8,
-            0    1.4px 0   $purple8,
-            -1.4px -0   0   $purple8,
-            1.4px -0   0   $purple8,
-            -1.4px  0   0   $purple8,
-            1.4px  0   0   $purple8,
-            -1.4px -1.4px 0   $purple8,
-            1.4px -1.4px 0   $purple8,
-            -1.4px  1.4px 0   $purple8,
-            1.4px  1.4px 0   $purple8,
-            -1.4px -1.4px 0   $purple8,
-            1.4px -1.4px 0   $purple8,
-            -1.4px  1.4px 0   $purple8,
-            1.4px  1.4px 0   $purple8,
-            -1.4px -1.4px 0   $purple8,
-            1.4px -1.4px 0   $purple8,
-            -1.4px  1.4px 0   $purple8,
-            1.4px  1.4px 0   $purple8,
-            -1.4px -1.4px 0   $purple8,
-            1.4px -1.4px 0   $purple8,
-            -1.4px  1.4px 0   $purple8,
-            1.4px  1.4px 0   $purple8;
+                -0   -1.4px 0   $purple8,
+                0   -1.4px 0   $purple8,
+                -0    1.4px 0   $purple8,
+                0    1.4px 0   $purple8,
+                -1.4px -0   0   $purple8,
+                1.4px -0   0   $purple8,
+                -1.4px  0   0   $purple8,
+                1.4px  0   0   $purple8,
+                -1.4px -1.4px 0   $purple8,
+                1.4px -1.4px 0   $purple8,
+                -1.4px  1.4px 0   $purple8,
+                1.4px  1.4px 0   $purple8,
+                -1.4px -1.4px 0   $purple8,
+                1.4px -1.4px 0   $purple8,
+                -1.4px  1.4px 0   $purple8,
+                1.4px  1.4px 0   $purple8,
+                -1.4px -1.4px 0   $purple8,
+                1.4px -1.4px 0   $purple8,
+                -1.4px  1.4px 0   $purple8,
+                1.4px  1.4px 0   $purple8,
+                -1.4px -1.4px 0   $purple8,
+                1.4px -1.4px 0   $purple8,
+                -1.4px  1.4px 0   $purple8,
+                1.4px  1.4px 0   $purple8;
         }
 
         &_drop-down {
