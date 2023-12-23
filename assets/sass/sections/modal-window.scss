@@ -230,3 +230,132 @@
         width: 8.625rem;
     }
 }
+
+.drop-down {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $gray4;
+    z-index: 100;
+
+    &__wrapper {
+        height: 100%;
+        width: 50%;
+        background: $white;
+        padding: 1rem;
+        position: relative;
+
+        & > *:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__skip-btn {
+        @extend %icon-btn;
+        @include size(1.2rem);
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    &__section-title {
+        @extend %text-color-default-5;
+        font-size: 1.0625rem;
+        font-weight: $bold;
+        letter-spacing: 0.04125rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__content-wrapper {
+
+        &_socials {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+
+    &__soc-link {
+        @extend %icon-btn;
+        @include size(1.5rem);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__list-item {
+        position: relative;
+    }
+
+    &__list-link {
+        @extend %text-color-default-1;
+
+        &_drop-down {
+            @extend %icon-text;
+            @include size(1rem);
+        }
+
+        &_drop-down-active {
+
+            &::after {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}
+
+.drop-down-list {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    padding: 1rem;
+    background: $white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    z-index: 1;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        max-width: 13rem;
+        width: 13rem;
+    }
+
+    &__link {
+        @extend %text-color-default-1;
+        font-size: 1.5rem;
+    }
+}
+
+@media all and (max-width: 2350px) {
+
+    .drop-down-list {
+
+        &__list {
+            max-width: 6rem;
+            width: 6rem;
+        }
+
+        &__link {
+            font-size: 1rem;
+        }
+    }
+
+}
+
+@media all and (max-width: 600px) {
+
+    .drop-down {
+        
+        &__wrapper {
+            width: 100%;
+        }
+    }
+
+}

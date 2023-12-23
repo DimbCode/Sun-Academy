@@ -61,3 +61,48 @@ a, button {
 a:hover, button:hover {
     opacity: 0.5;
 }
+
+// Media
+
+@media all and (max-width: 2350px) {
+
+    .wrapper {
+        gap: 4rem;
+
+        &__container {
+            grid-template-columns: 26.5625rem 1fr;
+            gap: 2.56rem;
+        }
+    }
+
+}
+
+@media all and (max-width: 1920px) {
+
+    .wrapper {
+        gap: 2rem;
+
+        &__container {
+            grid-template-columns: 22.5625rem 1fr;
+            gap: 1.56rem;
+        }
+    }
+
+}
+
+@media all and (max-width: 768px) {
+
+    .service__section-wrapper {
+        pointer-events: none;
+    }
+
+    .wrapper {
+        gap: 1rem;
+
+        &__container {
+            grid-template-columns: 1fr;
+            gap: 1.56rem;
+        }
+    }
+
+}

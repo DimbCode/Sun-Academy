@@ -8,6 +8,8 @@
         justify-content: space-between;
         position: relative;
         margin-bottom: 3.87rem;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
     &__header-section {
@@ -231,4 +233,203 @@
         text-decoration: line-through;
         display: inline-block;
     }
+}
+
+// Media
+
+@media all and (max-width: 2350px) {
+
+    .service {
+
+        &__description {
+            font-size: 1.175rem;
+        }
+    }
+
+    .home {
+
+        &__header {
+            margin-bottom: 2rem;
+        }
+
+        &__count {
+            font-size: 1.5125rem;
+            letter-spacing: normal;
+        }
+    
+        &__filter-btn {
+            @include size(1rem);
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            gap: 0.5rem;
+
+            &-text {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        &__btn {
+            @include size(1rem);
+            gap: 0.35rem;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+        }
+
+        &__header-section_buttons {
+            gap: 1rem;
+        }
+
+    }
+
+}
+
+@media all and (max-width: 2100px) {
+
+    .service {
+
+        &__description {
+            font-size: 1rem;
+            line-height: normal;
+        }
+
+        &__details-link {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+        }
+
+        &__section {
+
+            &_middle {
+                height: 2.5rem;
+            }
+        }
+
+        &__subelement {
+            height: 4rem;
+        }
+
+        &__name {
+            line-height: normal;
+            font-size: 1.5125rem;
+        }
+
+        &__subtitle {
+            font-size: 1.125rem;
+            line-height: normal;
+        }
+
+        &__price {
+            font-size: 1.5625rem;
+        }
+
+        &__cart-btn {
+            font-size: 1.35rem;
+        }
+
+        &__icon-btn {
+            @include size(1.5rem);
+        }
+
+        &__icon-btn-text {
+            top: 0.2rem;
+            left: 0.3rem;
+            font-size: 0.7rem;
+        }
+
+        &__notify {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+
+}
+
+@media all and (max-width: 1630px) {
+
+    .home {
+
+        &__items {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+    }
+
+    .service {
+
+        &__section-wrapper {
+            position: static;
+        }
+
+        &__notify {
+            border-radius: 0.9375rem;
+        }
+    }
+
+}
+
+@media all and (max-width: 1230px) {
+
+    .home {
+
+        &__items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+    }
+
+}
+
+@media all and (max-width: 1210px) {
+
+    .home {
+
+        &__items {
+            gap: 1rem;
+        }
+
+        &__header-section_count {
+            display: none;
+        }
+    }
+
+}
+
+@media all and (max-width: 970px) {
+
+    .home {
+
+        &__items {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+
+}
+
+@media all and (max-width: 768px) {
+
+    .home {
+
+        &__items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+}
+
+@media all and (max-width: 600px) {
+
+    .home {
+
+        &__items {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+
 }
