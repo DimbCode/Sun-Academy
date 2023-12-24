@@ -762,6 +762,7 @@ a, button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 1.5rem;
 }
 .header__middle-section_soc-links {
   gap: 2.31rem;
@@ -771,6 +772,12 @@ a, button {
 }
 .header__middle-list {
   gap: 1.44rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 0.5rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .header__active-link {
   -webkit-transition: 0s;
@@ -806,15 +813,18 @@ a, button {
   font-size: 1.5rem;
   line-height: normal;
   width: 100%;
-  padding: 0.3rem 1rem;
+  height: 100%;
+  padding: 0.3rem 0.5rem;
 }
 .header__search_active {
+  height: 3rem;
   max-width: 15rem;
   width: 100%;
   border: 2px solid #5516A6;
   border-radius: 0.5rem;
 }
 .header__search_active .header__search-btn {
+  height: 100%;
   padding: 0.5rem;
   border-left: 2px solid #5516A6;
 }
@@ -952,6 +962,7 @@ a, button {
   }
   .header__active-link-pop-up {
     font-size: 0.8rem;
+    min-width: 1.6875rem;
   }
 }
 @media all and (max-width: 1920px) {
@@ -981,12 +992,21 @@ a, button {
   .header__middle-list-link_active {
     padding: 0.5rem 1rem;
   }
+  .header__search-input {
+    font-size: 1rem;
+  }
+  .header__search_active {
+    height: 2.5rem;
+  }
 }
 @media all and (max-width: 1600px) {
   .header__bottom-list {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+  .header__search_active {
+    max-width: 12rem;
   }
 }
 @media all and (max-width: 1200px) {
@@ -1018,7 +1038,11 @@ a, button {
   .header__active-link-pop-up {
     font-size: 0.7rem;
     border-width: 1px;
-    padding: 0.15rem 0.2rem;
+    padding: 0.2rem;
+    min-width: 1.2875rem;
+  }
+  .header__search_active {
+    max-width: 10rem;
   }
 }
 @media all and (max-width: 850px) {
@@ -1039,16 +1063,7 @@ a, button {
     display: none;
   }
 }
-@media all and (max-width: 600px) {
-  .header__logo::before {
-    width: 15.9375rem;
-    height: 2.97275rem;
-  }
-  .header__middle-section_soc-links {
-    gap: 0.5rem;
-  }
-}
-@media all and (max-width: 550px) {
+@media all and (max-width: 700px) {
   .header__logo::before {
     width: 15.9375rem;
     height: 2.97275rem;
@@ -1059,6 +1074,9 @@ a, button {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 1rem;
+  }
+  .header__middle-section_soc-links {
+    gap: 0.5rem;
   }
 }
 .side-panel {
