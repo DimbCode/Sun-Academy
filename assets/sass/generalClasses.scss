@@ -26,64 +26,65 @@
 
 // Text Examples
 
-%text-color-default-1 {
-    color: $primaryColor;
-    text-shadow: 1px 1px 4px $gray1;
-}
+// %text-color-default-1 {
+//     color: $primaryColor;
+//     text-shadow: 1px 1px 4px $gray1;
+// }
 
-%text-color-default-2 {
-    color: $purple5;
-    text-shadow: 1px 1px 2px $purple6;
-}
+// %text-color-default-2 {
+//     color: $purple5;
+//     text-shadow: 1px 1px 2px $purple6;
+// }
 
-%text-color-default-3 {
-    text-shadow: 0px 2px 2px $purple10;
-    background: linear-gradient(276deg, #0030AC 2.96%, #6800CF 98.09%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+// %text-color-default-3 {
+//     background: linear-gradient(275.91deg, #0030AC 2.96%, #6800CF 98.09%);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // background-clip: text;
+    // text-fill-color: transparent;
+    // text-shadow: 0px 2px 2px rgba(175, 0, 221, 0.55);
+// }
 
-%text-color-default-4 {
-    color: $purple5;
-    text-shadow: 1px 1px 4px $purple6;
-}
+// %text-color-default-4 {
+//     color: $purple5;
+//     text-shadow: 1px 1px 4px $purple6;
+// }
 
-%text-color-default-5 {
-    text-shadow: 2px 2px 4px $purple10;
-    background: linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+// %text-color-default-5 {
+//     text-shadow: 2px 2px 4px $purple10;
+//     background: linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
+//     background-clip: text;
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+// }
 
-%text-color-default-6 {
-    color: $purple12;
-    text-shadow: 1px 1px 4px $purple7;
-}
+// %text-color-default-6 {
+//     color: $purple12;
+//     text-shadow: 1px 1px 4px $purple7;
+// }
 
-%text-color-active-1 {
-    color: $purple1;
-    text-shadow: 1px 1px 9px $purple2;
-}
+// %text-color-active-1 {
+//     color: $purple1;
+//     text-shadow: 1px 1px 9px $purple2;
+// }
 
-%text-color-active-2 {
-    color: $purple3;
-    text-shadow: 1px 1px 5px $purple4;
-}
+// %text-color-active-2 {
+//     color: $purple3;
+//     text-shadow: 1px 1px 5px $purple4;
+// }
 
-%text-color-active-3 {
-    color: $purple3;
-    text-shadow: 1px 1px 4px $purple7;
-}
+// %text-color-active-3 {
+//     color: $purple3;
+//     text-shadow: 1px 1px 4px $purple7;
+// }
 
-%text-color-active-4 {
-    text-shadow: 0px 1px 8px $purple2;
-    background: linear-gradient(276deg, #8C007E 2.96%, #6800CF 98.09%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+// %text-color-active-4 {
+//     text-shadow: 0px 1px 8px $purple2;
+//     background: linear-gradient(276deg, #8C007E 2.96%, #6800CF 98.09%);
+//     background-clip: text;
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+// }
 
 %text-color-active-5 {
     color: $purple5;
@@ -119,24 +120,30 @@
 }
 
 %icon-text {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 0.25rem;
+    line-height: normal;
+
+    &::after {
+        display: inline-block;
+        vertical-align: middle;
+    }
 }
 
 @mixin size($size) {
 
     &::after {
-        width: $size;
-        height: $size;
+        font-size: $size !important;
     }
     
 }
 
 %btn {
     @extend %icon-btn;
-    @extend %text-color-default-4;
-    padding: 0.9rem 2.37rem;
+    color: #250055;
+    text-shadow: 1px 1px 4px rgba(36, 0, 255, 0.25);
+    padding: 0.77rem 2.37rem;
     font-size: 1.625rem;
     letter-spacing: 0.0325rem;
     flex-direction: row-reverse;
@@ -149,8 +156,8 @@
 
 %btn-quadro {
     @extend %icon-btn;
-    @extend %text-color-default-4;
-    padding: 0.9rem 2.4rem;
+    color: #250055;
+    padding: 0.77rem 2.4rem;
     font-size: 1.625rem;
     letter-spacing: 0.0325rem;
     gap: 0.75rem;

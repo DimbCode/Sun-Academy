@@ -13,7 +13,12 @@
     }
 
     &__link {
-        @extend %text-color-default-3;
+        background: linear-gradient(275.91deg, #0030AC 2.96%, #6800CF 98.09%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-shadow: 0px 2px 2px rgba(175, 0, 221, 0.55);
         @extend %icon-text;
         gap: 0.75rem;
         font-size: 1.8125rem;
@@ -41,7 +46,12 @@
 
 
             &.active-btn {
-                @extend %text-color-active-4;
+                background: linear-gradient(275.91deg, #8C007E 2.96%, #6800CF 98.09%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                text-shadow: 0px 1px 8px rgba(251, 34, 255, 0.55);
             }
         }
     }
@@ -64,7 +74,8 @@
     }
 
     &__nested-list-link {
-        @extend %text-color-default-2;
+        color: #250055;
+        text-shadow: 1px 1px 2px rgba(130, 0, 233, 0.35);
         font-size: 1.5625rem;
         font-weight: $semibold;
         line-height: 2rem;

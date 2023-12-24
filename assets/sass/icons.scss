@@ -1,5 +1,33 @@
 // Icons Styles
 
+@font-face {
+    font-family: 'calendare-icons';
+    src:  url('../icons/calendare-icons.eot?39pmvl');
+    src:  url('../icons/calendare-icons.eot?39pmvl#iefix') format('embedded-opentype'),
+      url('../icons/calendare-icons.ttf?39pmvl') format('truetype'),
+      url('../icons/calendare-icons.woff?39pmvl') format('woff'),
+      url('../icons/calendare-icons.svg?39pmvl#calendare-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="ic-"]:after, [class*=" ic-"]:after {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'calendare-icons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 2.1875rem !important;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
 // Mixins
 
 @mixin icon($url) {
@@ -33,97 +61,97 @@
 
 // Global Icons
 
-.ic-arrow-top {
-    @include icon("../images/arrow-top.svg");
-}
+// .ic-arrow-top {
+//     @include icon("../images/arrow-top.svg");
+// }
 
-.ic-book {
-    @include icon("../images/book.svg");
-}
+// .ic-book {
+//     @include icon("../images/book.svg");
+// }
 
-.ic-cart {
-    @include icon("../images/cart.svg");
-}
+// .ic-cart {
+//     @include icon("../images/cart.svg");
+// }
 
-.ic-drop-down {
-    @include icon("../images/drop-down.svg");
-}
+// .ic-drop-down {
+//     @include icon("../images/drop-down.svg");
+// }
 
-.ic-fill-heart {
-    @include icon("../images/fill-heart.svg");
-}
+// .ic-fill-heart {
+//     @include icon("../images/fill-heart.svg");
+// }
 
-.ic-fill-heart-2 {
-    @include icon("../images/fill-heart-2.svg");
-}
+// .ic-fill-heart-2 {
+//     @include icon("../images/fill-heart-2.svg");
+// }
 
-.ic-filter {
-    @include icon("../images/filters.svg");
-}
+// .ic-filter {
+//     @include icon("../images/filters.svg");
+// }
 
-.ic-follow {
-    @include icon("../images/follow.svg");
-}
+// .ic-follow {
+//     @include icon("../images/follow.svg");
+// }
 
-.ic-hand {
-    @include icon("../images/hand.svg");
-}
+// .ic-hand {
+//     @include icon("../images/hand.svg");
+// }
 
-.ic-heart {
-    @include icon("../images/heart.svg");
-}
+// .ic-heart {
+//     @include icon("../images/heart.svg");
+// }
 
-.ic-in-yan {
-    @include icon("../images/in-yan.svg");
-}
+// .ic-in-yan {
+//     @include icon("../images/in-yan.svg");
+// }
 
-.ic-inst {
-    @include icon("../images/inst.svg");
-}
+// .ic-inst {
+//     @include icon("../images/inst.svg");
+// }
 
-.ic-message-2 {
-    @include icon("../images/message-2.svg");
-}
+// .ic-message-2 {
+//     @include icon("../images/message-2.svg");
+// }
 
-.ic-message {
-    @include icon("../images/message.svg");
-}
+// .ic-message {
+//     @include icon("../images/message.svg");
+// }
 
-.ic-prise {
-    @include icon("../images/prise.svg");
-}
+// .ic-prise {
+//     @include icon("../images/prise.svg");
+// }
 
-.ic-question {
-    @include icon("../images/question.svg");
-}
+// .ic-question {
+//     @include icon("../images/question.svg");
+// }
 
-.ic-search-2 {
-    @include icon("../images/search-2.svg");
-}
+// .ic-search-2 {
+//     @include icon("../images/search-2.svg");
+// }
 
-.ic-search {
-    @include icon("../images/search.svg");
-}
+// .ic-search {
+//     @include icon("../images/search.svg");
+// }
 
-.ic-stars {
-    @include icon("../images/stars.svg");
-}
+// .ic-stars {
+//     @include icon("../images/stars.svg");
+// }
 
-.ic-stick {
-    @include icon("../images/stick.svg");
-}
+// .ic-stick {
+//     @include icon("../images/stick.svg");
+// }
 
-.ic-tg {
-    @include icon("../images/tg.svg");
-}
+// .ic-tg {
+//     @include icon("../images/tg.svg");
+// }
 
-.ic-users {
-    @include icon("../images/users.svg");
-}
+// .ic-users {
+//     @include icon("../images/users.svg");
+// }
 
-.ic-vk {
-    @include icon("../images/vk.svg");
-}
+// .ic-vk {
+//     @include icon("../images/vk.svg");
+// }
 
 // Side Panel Icons
 
@@ -177,38 +205,136 @@
 
 // Modal Windows Icons
 
-.ic-ruble {
-    @include icon("../images/ruble.svg");
-}
+// .ic-ruble {
+//     @include icon("../images/ruble.svg");
+// }
 
-.ic-sphere {
-    @include icon("../images/sphere.svg");
-}
+// .ic-sphere {
+//     @include icon("../images/sphere.svg");
+// }
 
-.ic-hat {
-    @include icon("../images/hat.svg");
-}
+// .ic-hat {
+//     @include icon("../images/hat.svg");
+// }
 
-.ic-hands {
-    @include icon("../images/hands.svg");
-}
+// .ic-hands {
+//     @include icon("../images/hands.svg");
+// }
 
-.ic-waves {
-    @include icon("../images/wave.svg");
-}
+// .ic-waves {
+//     @include icon("../images/wave.svg");
+// }
 
-.ic-hand-2 {
-    @include icon("../images/hand-2.svg");
-}
+// .ic-hand-2 {
+//     @include icon("../images/hand-2.svg");
+// }
 
-.ic-settings {
-    @include icon("../images/settings.svg");
-}
+// .ic-settings {
+//     @include icon("../images/settings.svg");
+// }
 
-.ic-skip {
-    @include icon("../images/skip.svg");
-}
+// .ic-skip {
+//     @include icon("../images/skip.svg");
+// }
 
-.ic-trash {
-    @include icon("../images/trash.svg");
-}
+// .ic-trash {
+//     @include icon("../images/trash.svg");
+// }
+  
+.ic-stick:after {
+    content: "\e918";
+  }
+  .ic-cart:after {
+    content: "\e910";
+  }
+  .ic-stars:after {
+    content: "\e913";
+  }
+  .ic-trash:after {
+    content: "\e914";
+  }
+  .ic-users:after {
+    content: "\e915";
+  }
+  .ic-search:after {
+    content: "\e917";
+  }
+  .ic-skip-2:after {
+    content: "\e907";
+  }
+  .ic-arrow-top:after {
+    content: "\e900";
+  }
+  .ic-follow:after {
+    content: "\e901";
+  }
+  .ic-follow-fill:after {
+    content: "\e902";
+  }
+  .ic-drop-down:after {
+    content: "\e903";
+  }
+  .ic-skip:after {
+    content: "\e904";
+  }
+  .ic-message:after {
+    content: "\e905";
+  }
+  .ic-message-2:after {
+    content: "\e906";
+  }
+  .ic-book:after {
+    content: "\e908";
+  }
+  .ic-hat:after {
+    content: "\e909";
+  }
+  .ic-hand:after {
+    content: "\e90a";
+  }
+  .ic-hands:after {
+    content: "\e90b";
+  }
+  .ic-fill-heart-2:after {
+    content: "\e90c";
+  }
+  .ic-heart:after {
+    content: "\e90d";
+  }
+  .ic-inst:after {
+    content: "\e90e";
+  }
+  .ic-question:after {
+    content: "\e90f";
+  }
+  .ic-ruble:after {
+    content: "\e911";
+  }
+  .ic-search-2:after {
+    content: "\e912";
+  }
+  .ic-settings:after {
+    content: "\e91a";
+  }
+  .ic-filter:after {
+    content: "\e91b";
+  }
+  .ic-sphere:after {
+    content: "\e922";
+  }
+  .ic-tg:after {
+    content: "\e923";
+  }
+  .ic-prise:after {
+    content: "\e926";
+  }
+  .ic-vk:after {
+    content: "\e929";
+  }
+  .ic-waves:after {
+    content: "\e92a";
+  }
+  .ic-in-yan:after {
+    content: "\e92b";
+  }  
+  

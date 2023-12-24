@@ -23,12 +23,22 @@ function toggleDropDown(elem, currentEl, activeCl) {
 // Range Events
 
 noUiSlider.create(slider, {
-    start: [20, 80],
+    start: [0, 1000000],
     connect: true,
     range: {
         'min': 0,
-        'max': 100
+        'max': 1000000
     }
+});
+
+slider.noUiSlider.on("update", () => {
+    const [startInput, endInput] = slider.nextElementSibling.querySelectorAll(".input > input");
+    const [startValue, endValue] = slider.noUiSlider.get();
+
+    console.log(startInput, endInput, startValue, endValue);
+    
+    startInput.value = Math.floor(startValue);
+    endInput.value = Math.floor(endValue);
 });
 
 // Drop-Downs Events

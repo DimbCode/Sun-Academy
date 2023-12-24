@@ -30,13 +30,43 @@
     &__btn {
         @extend %btn;
 
+        &::after {
+            filter: drop-shadow(1px 1px 4px rgba(255, 0, 229, 0.25));
+            filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
+            background: linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+        }
+
         &_active {
-            @extend %text-color-active-5;
+            color: #250055;
+            text-shadow: 1px 1px 4px rgba(255, 0, 229, 0.55);
+        }
+
+        &_changed {
+
+            &::before {
+                content: "";
+                width: 1.75rem;
+                height: 1.75rem;
+                border-radius: 50%;
+                background: linear-gradient(180deg, #F00 0%, #8A0000 100%);
+                display: inline-block;
+                box-shadow: 1px 1px 4px rgba(91, 0, 163, 0.50);
+            }
         }
     }
 
     &__count {
-        @extend %text-color-default-5;
+        color: #250055;
+        background: radial-gradient(100% 306.77% at 0% 0%, rgba(136, 12, 212, 0.7) 0%, rgba(167, 12, 212, 0) 45.83%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(49.77% 155.96% at 100% 100%, rgba(255, 0, 230, 0.8) 0%, rgba(216, 50, 219, 0.8) 0.01%, rgba(181, 50, 219, 0) 69.24%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-shadow: 2px 2px 4px rgba(175, 0, 221, 0.25);
         font-family: $secondaryFont;
         font-size: 1.8125rem;
         font-weight: $extrabold;
@@ -46,11 +76,29 @@
     &__filter-btn {
         @extend %btn-quadro;
         gap: 1.62rem;
+
+        &::after {
+            filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
+            background: linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+        }
     }
 
     &__filter-btn-text {
         @extend %icon-text;
         gap: 0.75rem;
+
+        &::after {
+            filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
+            background: linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+        }
     }
 
     &__items {
@@ -124,7 +172,8 @@
     }
 
     &__name {
-        @extend %text-color-default-6;
+        color: #5B0086;
+        text-shadow: 1px 1px 15px #FFF, 0px 1px 8px rgba(250, 0, 255, 0.45);
         font-size: 1.8125rem;
         font-weight: $blackFont;
         line-height: 1.75rem;
@@ -134,6 +183,8 @@
         font-size: 1.375rem;
         font-weight: $medium;
         line-height: 1.5rem;
+        color: #250055;
+        text-shadow: 1px 1px 2px rgba(130, 0, 233, 0.35);
     }
 
     &__bottom-section {
@@ -147,19 +198,34 @@
     &__price {
         font-family: $thirdFont;
         font-size: 2.0625rem;
-        @extend %text-color-default-4;
+        color: #250055;
+        text-shadow: 1px 1px 4px rgba(130, 0, 233, 0.35);
     }
 
     &__cart-btn {
         font-family: $thirdFont;
         font-size: 1.75rem;
         font-weight: $semibold;
-        @extend %text-color-default-5;
+        color: #250055;
+        background: radial-gradient(100% 306.77% at 0% 0%, rgba(136, 12, 212, 0.7) 0%, rgba(167, 12, 212, 0) 45.83%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(49.77% 155.96% at 100% 100%, rgba(255, 0, 230, 0.8) 0%, rgba(216, 50, 219, 0.8) 0.01%, rgba(181, 50, 219, 0) 69.24%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-shadow: 2px 2px 4px rgba(175, 0, 221, 0.25);
     }
 
     &__icon-btn {
         @include size(2.375rem);
         position: relative;
+
+        &::after {
+            filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
+            background: linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
 
     &__icon-btn-text {

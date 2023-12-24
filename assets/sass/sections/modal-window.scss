@@ -36,7 +36,13 @@
     }
 
     &__title {
-        @extend %text-color-default-5;
+        background: radial-gradient(100% 306.77% at 0% 0%, rgba(136, 12, 212, 0.7) 0%, rgba(167, 12, 212, 0) 45.83%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(49.77% 155.96% at 100% 100%, rgba(255, 0, 230, 0.8) 0%, rgba(216, 50, 219, 0.8) 0.01%, rgba(181, 50, 219, 0) 69.24%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-shadow: 2px 2px 4px rgba(175, 0, 221, 0.25);
+
         font-family: $thirdFont;
         font-size: 2.5rem;
         font-style: normal;
@@ -68,7 +74,12 @@
     }
 
     &__section-title {
-        @extend %text-color-default-3;
+        background: linear-gradient(275.91deg, #0030AC 2.96%, #6800CF 98.09%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-shadow: 0px 2px 2px rgba(175, 0, 221, 0.55);
         @extend %icon-text;
         @include size(2.5rem);
         flex-direction: row-reverse;
@@ -79,6 +90,12 @@
 
         &_mini {
             font-size: 1.625rem;
+            background: linear-gradient(275.91deg, #0030AC 2.96%, #6800CF 98.09%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            text-shadow: 1px 1px 2px rgba(130, 0, 233, 0.35);
         }
     }
 
@@ -134,7 +151,7 @@
     }
 
     &__save-btn {
-        @extend %text-color-default-1;
+        color: #FFF;
         @extend %btn;
         margin-top: 3.31rem;
         padding: 0.8rem 2.38rem;
@@ -264,7 +281,12 @@
     }
 
     &__section-title {
-        @extend %text-color-default-5;
+        background: linear-gradient(275.91deg, #0030AC 2.96%, #6800CF 98.09%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-shadow: 0px 2px 2px rgba(175, 0, 221, 0.55);
         font-size: 1.0625rem;
         font-weight: $bold;
         letter-spacing: 0.04125rem;
@@ -296,7 +318,8 @@
     }
 
     &__list-link {
-        @extend %text-color-default-1;
+        color: $primaryColor;
+        text-shadow: 1px 1px 4px $gray1;
 
         &_drop-down {
             @extend %icon-text;
@@ -331,7 +354,8 @@
     }
 
     &__link {
-        @extend %text-color-default-1;
+        color: $primaryColor;
+        text-shadow: 1px 1px 4px $gray1;
         font-size: 1.5rem;
     }
 }
