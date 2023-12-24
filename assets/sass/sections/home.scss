@@ -227,6 +227,15 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        &_heart {
+
+            &.btn-counted {
+                &::after {
+                    content: "\e90c";
+                }
+            }
+        }
     }
 
     &__icon-btn-text {
@@ -316,6 +325,8 @@
 
 // Media
 
+// Media 2350px
+
 @media all and (max-width: 2350px) {
 
     .service {
@@ -364,6 +375,8 @@
 
 }
 
+// Media 2100px
+
 @media all and (max-width: 2100px) {
 
     .service {
@@ -409,15 +422,6 @@
 
         &__icon-btn {
             @include size(1.5rem);
-
-            &_heart {
-
-                &.btn-counted {
-                    &::after {
-                        content: "\e90c";
-                    }
-                }
-            }
         }
 
         &__icon-btn-text {
@@ -432,6 +436,8 @@
     }
 
 }
+
+// Media 1630px
 
 @media all and (max-width: 1630px) {
 
@@ -457,6 +463,8 @@
 
 }
 
+// Media 1230px
+
 @media all and (max-width: 1230px) {
 
     .home {
@@ -469,6 +477,8 @@
     }
 
 }
+
+// Media 1210px
 
 @media all and (max-width: 1210px) {
 
@@ -485,6 +495,8 @@
 
 }
 
+// Media 970px
+
 @media all and (max-width: 970px) {
 
     .home {
@@ -497,6 +509,8 @@
 
 }
 
+// Media 768px
+
 @media all and (max-width: 768px) {
 
     .home {
@@ -508,6 +522,8 @@
     }
 
 }
+
+// Media 600px
 
 @media all and (max-width: 600px) {
 

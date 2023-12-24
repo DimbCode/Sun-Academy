@@ -163,6 +163,8 @@ h1, h2, h3, h4, h5, h6 {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .aside-ic-1::before {
@@ -606,7 +608,9 @@ a, button {
 }
 
 .none {
-  display: none !important;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
 }
 
 .logo {
@@ -1461,6 +1465,9 @@ a, button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.service__icon-btn_heart.btn-counted::after {
+  content: "\e90c";
+}
 .service__icon-btn-text {
   position: absolute;
   top: 0.18rem;
@@ -1624,9 +1631,6 @@ a, button {
   .service__icon-btn::after {
     font-size: 1.5rem !important;
   }
-  .service__icon-btn_heart.btn-counted::after {
-    content: "\e90c";
-  }
   .service__icon-btn-text {
     top: 0.2rem;
     font-size: 0.7rem;
@@ -1714,6 +1718,8 @@ a, button {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .modal-window__wrapper {
   max-height: 100vh;
@@ -1871,12 +1877,17 @@ a, button {
   color: #FFF;
   margin-top: 3.31rem;
   padding: 0.8rem 2.38rem;
+  background: radial-gradient(90.36% 257.55% at 15.66% 38.53%, rgba(0, 240, 255, 0.85) 0%, rgba(0, 240, 255, 0) 37.59%), radial-gradient(56.63% 161.4% at 84.34% 66.06%, rgba(255, 0, 230, 0.85) 0%, rgba(255, 80, 237, 0.85) 0.01%, rgba(255, 0, 230, 0) 76.06%), linear-gradient(275.91deg, #0030AC 2.96%, #6800CF 98.09%);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  background: radial-gradient(258.07% 104.86% at 15.66% 38.53%, rgba(0, 240, 255, 0.85) 0%, rgba(0, 240, 255, 0) 37.59%), radial-gradient(161.74% 66.02% at 84.34% 66.06%, rgba(255, 0, 230, 0.85) 0%, rgba(255, 80, 237, 0.85) 0.01%, rgba(255, 0, 230, 0) 76.06%), linear-gradient(276deg, #0030AC 2.96%, #6800CF 98.09%);
-  -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15), 0px 3px 4px 0px rgba(255, 255, 255, 0.48) inset;
-          box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15), 0px 3px 4px 0px rgba(255, 255, 255, 0.48) inset;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15), inset 0px 3px 4px rgba(255, 255, 255, 0.48);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15), inset 0px 3px 4px rgba(255, 255, 255, 0.48);
   color: white;
   text-shadow: 0 -1.4px 0 rgba(36, 0, 255, 0.25), 0 -1.4px 0 rgba(36, 0, 255, 0.25), 0 1.4px 0 rgba(36, 0, 255, 0.25), 0 1.4px 0 rgba(36, 0, 255, 0.25), -1.4px 0 0 rgba(36, 0, 255, 0.25), 1.4px 0 0 rgba(36, 0, 255, 0.25), -1.4px 0 0 rgba(36, 0, 255, 0.25), 1.4px 0 0 rgba(36, 0, 255, 0.25), -1.4px -1.4px 0 rgba(36, 0, 255, 0.25), 1.4px -1.4px 0 rgba(36, 0, 255, 0.25), -1.4px 1.4px 0 rgba(36, 0, 255, 0.25), 1.4px 1.4px 0 rgba(36, 0, 255, 0.25), -1.4px -1.4px 0 rgba(36, 0, 255, 0.25), 1.4px -1.4px 0 rgba(36, 0, 255, 0.25), -1.4px 1.4px 0 rgba(36, 0, 255, 0.25), 1.4px 1.4px 0 rgba(36, 0, 255, 0.25), -1.4px -1.4px 0 rgba(36, 0, 255, 0.25), 1.4px -1.4px 0 rgba(36, 0, 255, 0.25), -1.4px 1.4px 0 rgba(36, 0, 255, 0.25), 1.4px 1.4px 0 rgba(36, 0, 255, 0.25), -1.4px -1.4px 0 rgba(36, 0, 255, 0.25), 1.4px -1.4px 0 rgba(36, 0, 255, 0.25), -1.4px 1.4px 0 rgba(36, 0, 255, 0.25), 1.4px 1.4px 0 rgba(36, 0, 255, 0.25);
+}
+.modal-window__save-btn:hover {
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(255, 0, 229, 0.6);
+          box-shadow: 0px 2px 10px 0px rgba(255, 0, 229, 0.6);
+  text-shadow: 0 -1.4px 0 rgba(238, 1, 214, 0.8), 0 -1.4px 0 rgba(238, 1, 214, 0.8), 0 1.4px 0 rgba(238, 1, 214, 0.8), 0 1.4px 0 rgba(238, 1, 214, 0.8), -1.4px 0 0 rgba(238, 1, 214, 0.8), 1.4px 0 0 rgba(238, 1, 214, 0.8), -1.4px 0 0 rgba(238, 1, 214, 0.8), 1.4px 0 0 rgba(238, 1, 214, 0.8), -1.4px -1.4px 0 rgba(238, 1, 214, 0.8), 1.4px -1.4px 0 rgba(238, 1, 214, 0.8), -1.4px 1.4px 0 rgba(238, 1, 214, 0.8), 1.4px 1.4px 0 rgba(238, 1, 214, 0.8), -1.4px -1.4px 0 rgba(238, 1, 214, 0.8), 1.4px -1.4px 0 rgba(238, 1, 214, 0.8), -1.4px 1.4px 0 rgba(238, 1, 214, 0.8), 1.4px 1.4px 0 rgba(238, 1, 214, 0.8), -1.4px -1.4px 0 rgba(238, 1, 214, 0.8), 1.4px -1.4px 0 rgba(238, 1, 214, 0.8), -1.4px 1.4px 0 rgba(238, 1, 214, 0.8), 1.4px 1.4px 0 rgba(238, 1, 214, 0.8), -1.4px -1.4px 0 rgba(238, 1, 214, 0.8), 1.4px -1.4px 0 rgba(238, 1, 214, 0.8), -1.4px 1.4px 0 rgba(238, 1, 214, 0.8), 1.4px 1.4px 0 rgba(238, 1, 214, 0.8);
 }
 .modal-window__filter-list {
   display: -webkit-box;
@@ -1894,7 +1905,7 @@ a, button {
   font-family: "Fira Sans Extra Condensed";
   padding: 0.75rem 0.94rem;
 }
-.modal-window__filter-btn_active-opacity {
+.modal-window__filter-btn:hover {
   background: rgba(255, 242, 254, 0.75);
 }
 .modal-window__filter-btn_active {
@@ -1915,6 +1926,12 @@ a, button {
 }
 .modal-window__btn {
   gap: 0.75rem;
+}
+.modal-window__btn:hover {
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(255, 0, 229, 0.55);
+          box-shadow: 0px 2px 10px 0px rgba(255, 0, 229, 0.55);
+  color: #250055;
+  text-shadow: 1px 1px 4px rgba(255, 0, 229, 0.55);
 }
 .modal-window__btn::after {
   -webkit-filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
@@ -1987,6 +2004,8 @@ a, button {
   left: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: 100;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .drop-down__wrapper {
   height: 100%;
@@ -2065,6 +2084,8 @@ a, button {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
   z-index: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .drop-down-list_all-width {
   width: 100%;
@@ -2201,7 +2222,7 @@ a, button {
     padding: 0.5rem 1rem;
   }
   .input__input {
-    width: 3rem;
+    width: 5.5rem;
   }
   .input__input::-webkit-input-placeholder {
     font-size: 1.25rem;
@@ -2266,16 +2287,7 @@ a, button {
     padding: 0.3rem 1rem;
   }
 }
-@media all and (max-width: 400px) {
-  .modal-window__footer {
-    gap: 0.3rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .modal-window__btn {
-    font-size: 0.8rem;
-  }
+@media all and (max-width: 500px) {
   .modal-window__input-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2285,6 +2297,20 @@ a, button {
   }
   .modal-window__input-wrapper .input {
     width: 100%;
+  }
+  .modal-window__input-wrapper .input__input {
+    text-align: center;
+  }
+}
+@media all and (max-width: 400px) {
+  .modal-window__footer {
+    gap: 0.3rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .modal-window__btn {
+    font-size: 0.8rem;
   }
 }
 @media all and (max-width: 600px) {

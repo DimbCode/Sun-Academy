@@ -42,8 +42,6 @@ noUiSlider.create(slider, {
 slider.noUiSlider.on("update", () => {
     const [startInput, endInput] = slider.nextElementSibling.querySelectorAll(".input > input");
     const [startValue, endValue] = slider.noUiSlider.get();
-
-    console.log(startInput, endInput, startValue, endValue);
     
     startInput.value = Math.floor(startValue);
     endInput.value = Math.floor(endValue);
@@ -75,34 +73,49 @@ modalButtons.forEach(item => {
     });
 });
 
+modalWindows.forEach(item => {
+    item.addEventListener("click", (event) => {
+        if (event.target == event.currentTarget) {
+            item.classList.add("none");
+        }
+    });
+});
+
 // Cart Buttons Windows
 
 countButtons.forEach(item => {
     item.addEventListener("click", (event) => {
         const currentBtn = event.currentTarget;
-        const cartCounts = document.querySelectorAll("*[data-count-count]");
-
-        cartCounts.forEach(item => {
-            if (item.getAttribute("data-count-name") == currentBtn.getAttribute("data-count-name")) {
-                if (currentBtn.getAttribute("data-count") == "false") {
-                    if (item.getAttribute("data-count-name") == "cart") {
-                        currentBtn.textContent = "В корзине";
-                    }
-                    currentBtn.setAttribute("data-count", "true");
-                    currentBtn.classList.add("btn-counted");
-                    item.textContent = +(item.textContent) + 1;
-                    item.setAttribute("data-count-count", item.getAttribute("data-count-count") + 1);
-                }   else {
-                    if (item.getAttribute("data-count-name") == "cart") {
-                        currentBtn.textContent = "В корзину";
-                    }
-                    currentBtn.setAttribute("data-count", "false");
-                    currentBtn.classList.remove("btn-counted");
-                    item.textContent = +(item.textContent) - 1;
-                    item.setAttribute("data-count-count", item.getAttribute("data-count-count") - 1);
-                }
+        const btnAttrName = currentBtn.getAttribute("data-count-name");
+        const btnAttrValue = currentBtn.getAttribute("data-count");
+        const cartCounts = document.querySelectorAll(`*[data-count-count]`);
+        const cartCountsCurrentType = Array.from(cartCounts).filter(item => item.getAttribute("data-count-name") == btnAttrName);
+        
+        if (btnAttrValue == "false") {
+            if (btnAttrName == "cart") {
+                currentBtn.textContent = "В корзине";
             }
-        });
+            
+            currentBtn.setAttribute("data-count", "true");
+            currentBtn.classList.add("btn-counted");
+
+            cartCountsCurrentType.forEach(counter => {
+                counter.textContent = +(counter.textContent) + 1;
+                counter.setAttribute("data-count-count", counter.getAttribute("data-count-count") + 1);
+            });
+        }   else {
+            if (btnAttrName == "cart") {
+                currentBtn.textContent = "В корзину";
+            }
+
+            currentBtn.setAttribute("data-count", "false");
+            currentBtn.classList.remove("btn-counted");
+
+            cartCountsCurrentType.forEach(counter => {
+                counter.textContent = +(counter.textContent) - 1;
+                counter.setAttribute("data-count-count", counter.getAttribute("data-count-count") - 1);
+            });
+        }
     });
 });
 
