@@ -57,7 +57,7 @@
                     <div class="header__top-section header__top-section_mobile-actions header__mobile-block">
                         <div class="flex header__middle-section header__middle-section_soc-links">
 
-                            <button class="ic-follow header__active-link header__active-link_filters"></button>
+                            <button class="ic-follow header__active-link header__active-link_filters" data-modal="filters"></button>
                             <button class="ic-follow header__active-link header__active-link_follow"></button>
                             <button class="ic-fill-heart-2 header__active-link header__active-link_heart"></button>
                             <div class="header__active-link-wrapper">
@@ -68,7 +68,7 @@
                             </div>
                             <button class="ic-users header__active-link header__active-link_users"></button>
                             <button class="ic-search-2 header__active-link header__active-link_search"></button>
-                            <button class="ic-follow header__active-link header__active-link_mobile"></button>
+                            <button class="ic-follow header__active-link header__active-link_mobile" data-modal="drop-down"></button>
     
                         </div>
                     </div>
@@ -89,12 +89,42 @@
                                 </a>
                             </li>
                             <li class="header__middle-list-item">
-                                <button class="ic-drop-down header__middle-list-link header__middle-list-link_drop-down">
+                                <button class="ic-drop-down header__middle-list-link header__middle-list-link_drop-down drop-down-btn">
                                     О проекте
                                 </button>
+
+                                <div class="drop-down-list none">
+                                    <ul class="drop-down-list__list">
+                                        <li class="drop-down-list__item">
+                                            <a href="#" class="drop-down-list__link">
+                                                Текст №1
+                                            </a>
+                                        </li>
+                                        <li class="drop-down-list__item">
+                                            <a href="#" class="drop-down-list__link">
+                                                Текст №2
+                                            </a>
+                                        </li>
+                                        <li class="drop-down-list__item">
+                                            <a href="#" class="drop-down-list__link">
+                                                Текст №3
+                                            </a>
+                                        </li>
+                                        <li class="drop-down-list__item">
+                                            <a href="#" class="drop-down-list__link">
+                                                Текст №2
+                                            </a>
+                                        </li>
+                                        <li class="drop-down-list__item">
+                                            <a href="#" class="drop-down-list__link">
+                                                Текст №3
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                             <li class="header__middle-list-item">
-                                <button class="ic-drop-down header__middle-list-link header__middle-list-link_drop-down header__middle-list-link_drop-down-active">
+                                <button class="ic-drop-down header__middle-list-link header__middle-list-link_drop-down active-btn drop-down-btn">
                                     Статьи
                                 </button>
 
@@ -129,7 +159,7 @@
                                 </div>
                             </li>
                             <li class="header__middle-list-item">
-                                <button class="ic-drop-down header__middle-list-link header__middle-list-link_drop-down">
+                                <button class="ic-drop-down header__middle-list-link header__middle-list-link_drop-down drop-down-btn">
                                     Коды Света
                                 </button>
 
@@ -164,7 +194,7 @@
                                 </div>
                             </li>
                             <li class="header__middle-list-item">
-                                <button class="ic-drop-down header__middle-list-link header__middle-list-link_drop-down">
+                                <button class="ic-drop-down header__middle-list-link header__middle-list-link_drop-down drop-down-btn">
                                     Обучение
                                 </button>
 
@@ -199,7 +229,7 @@
                                 </div>
                             </li>
                             <li class="header__middle-list-item">
-                                <button class="ic-drop-down header__middle-list-link header__middle-list-link_drop-down">
+                                <button class="ic-drop-down header__middle-list-link header__middle-list-link_drop-down drop-down-btn">
                                     Отзывы
                                 </button>
 
@@ -327,7 +357,7 @@
                             </li>
 
                             <li class="side-panel__link-item">
-                                <button href="#" class="ic-drop-down aside-ic-2 side-panel__link side-panel__link_current side-panel__link_drop-down side-panel__link_drop-down-active">
+                                <button href="#" class="ic-drop-down aside-ic-2 side-panel__link side-panel__link_drop-down active-btn drop-down-btn">
                                     Создатель
                                 </button>
 
@@ -336,13 +366,13 @@
                                 <div class="side-panel__link-lists">
                                     <ul class="side-panel__nested-list">
                                         <li class="side-panel__nested-list-item">
-                                            <button href="#" class="side-panel__nested-list-link side-panel__nested-list-link_drop-down">
+                                            <button href="#" class="side-panel__nested-list-link side-panel__nested-list-link_drop-down drop-down-btn">
                                                 Энергии Божественности
                                             </button>
 
                                             <!-- Nested List -->
 
-                                            <ul class="side-panel__nested-list">
+                                            <ul class="side-panel__nested-list none">
                                                 <li class="side-panel__nested-list-item">
                                                     <a href="#" class="side-panel__nested-list-link">
                                                         Энергии Квантового Уровня
@@ -381,7 +411,7 @@
                             </li>
 
                             <li class="side-panel__link-item">
-                                <button href="#" class="ic-drop-down aside-ic-3 side-panel__link side-panel__link_drop-down">
+                                <button href="#" class="ic-drop-down aside-ic-3 side-panel__link side-panel__link_drop-down drop-down-btn">
                                     ПервоТворец
                                 </button>
 
@@ -390,7 +420,7 @@
                                 <div class="side-panel__link-lists none">
                                     <ul class="side-panel__nested-list">
                                         <li class="side-panel__nested-list-item">
-                                            <button href="#" class="side-panel__nested-list-link side-panel__nested-list-link_drop-down">
+                                            <button href="#" class="side-panel__nested-list-link side-panel__nested-list-link_drop-down drop-down-btn">
                                                 Энергии Божественности
                                             </button>
 
@@ -435,7 +465,7 @@
                             </li>
                             
                             <li class="side-panel__link-item">
-                                <button href="#" class="ic-drop-down aside-ic-4 side-panel__link side-panel__link_drop-down">
+                                <button href="#" class="ic-drop-down aside-ic-4 side-panel__link side-panel__link_drop-down drop-down-btn">
                                     Великий РА
                                 </button>
 
@@ -444,7 +474,7 @@
                                 <div class="side-panel__link-lists none">
                                     <ul class="side-panel__nested-list">
                                         <li class="side-panel__nested-list-item">
-                                            <button href="#" class="side-panel__nested-list-link side-panel__nested-list-link_drop-down">
+                                            <button href="#" class="side-panel__nested-list-link side-panel__nested-list-link_drop-down drop-down-btn">
                                                 Энергии Божественности
                                             </button>
 
@@ -489,7 +519,7 @@
                             </li>
 
                             <li class="side-panel__link-item">
-                                <button href="#" class="ic-drop-down aside-ic-5 side-panel__link side-panel__link_drop-down">
+                                <button href="#" class="ic-drop-down aside-ic-5 side-panel__link side-panel__link_drop-down drop-down-btn">
                                     Сириус
                                 </button>
 
@@ -498,7 +528,7 @@
                                 <div class="side-panel__link-lists none">
                                     <ul class="side-panel__nested-list">
                                         <li class="side-panel__nested-list-item">
-                                            <button href="#" class="side-panel__nested-list-link side-panel__nested-list-link_drop-down">
+                                            <button href="#" class="side-panel__nested-list-link side-panel__nested-list-link_drop-down drop-down-btn">
                                                 Энергии Божественности
                                             </button>
 
@@ -603,7 +633,7 @@
                             <header class="flex home__header">
 
                                 <div class="flex home__header-section home__header-section_buttons">
-                                    <button class="ic-filter home__btn home__btn_active">
+                                    <button class="ic-filter home__btn home__btn_active" data-modal="filters">
                                         Фильтры
                                     </button>
 
@@ -947,7 +977,7 @@
 
             <!-- Modal Window -->
 
-            <div class="modal-window none">
+            <div class="modal-window none" data-modal="filters">
 
                 <div class="modal-window__wrapper">
 
@@ -959,7 +989,7 @@
                             Фильтры
                         </h3>
 
-                        <button class="ic-skip modal-window__skip-btn"></button>
+                        <button class="ic-skip modal-window__skip-btn" data-modal="main"></button>
 
                     </header>
 
@@ -1273,11 +1303,11 @@
 
         <!-- Drop Down -->
 
-        <div class="drop-down none">
+        <div class="drop-down none" data-modal="drop-down">
 
             <div class="drop-down__wrapper">
 
-                <button class="ic-skip drop-down__skip-btn"></button>
+                <button class="ic-skip drop-down__skip-btn" data-modal="main"></button>
 
                 <!-- Chapter -->
 
@@ -1345,7 +1375,7 @@
                                 </a>
                             </li>
                             <li class="drop-down__list-item">
-                                <button href="#" class="ic-drop-down drop-down__list-link drop-down__list-link_drop-down">
+                                <button href="#" class="ic-drop-down drop-down__list-link drop-down__list-link_drop-down drop-down-btn">
                                     О проекте
                                 </button>
 
@@ -1380,7 +1410,7 @@
                                 </div>
                             </li>
                             <li class="drop-down__list-item">
-                                <button href="#" class="ic-drop-down drop-down__list-link drop-down__list-link_drop-down">
+                                <button href="#" class="ic-drop-down drop-down__list-link drop-down__list-link_drop-down drop-down-btn">
                                     Статьи
                                 </button>
 
@@ -1415,7 +1445,7 @@
                                 </div>
                             </li>
                             <li class="drop-down__list-item">
-                                <button href="#" class="ic-drop-down drop-down__list-link drop-down__list-link_drop-down">
+                                <button href="#" class="ic-drop-down drop-down__list-link drop-down__list-link_drop-down drop-down-btn">
                                     Коды Света
                                 </button>
 
@@ -1450,7 +1480,7 @@
                                 </div>
                             </li>
                             <li class="drop-down__list-item">
-                                <button href="#" class="ic-drop-down drop-down__list-link drop-down__list-link_drop-down">
+                                <button href="#" class="ic-drop-down drop-down__list-link drop-down__list-link_drop-down drop-down-btn">
                                     Обучение
                                 </button>
 
@@ -1485,7 +1515,7 @@
                                 </div>
                             </li>
                             <li class="drop-down__list-item">
-                                <button href="#" class="ic-drop-down drop-down__list-link drop-down__list-link_drop-down">
+                                <button href="#" class="ic-drop-down drop-down__list-link drop-down__list-link_drop-down drop-down-btn">
                                     Отзывы
                                 </button>
 

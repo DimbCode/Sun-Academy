@@ -158,3 +158,10 @@
     border-radius: 0.9375rem;
     border: 1px solid $purple11;
 }
+
+.active-btn {
+    
+    &::after {
+        transform: rotate(-180deg);
+    }
+}

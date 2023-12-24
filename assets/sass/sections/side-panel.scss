@@ -35,13 +35,14 @@
                 box-shadow: 1px 1px 5px $brown1;
             }
 
-            &-active::after {
+            &.active-btn::after {
                 transform: translate(0, -50%) rotate(180deg);
             }
-        }
 
-        &_current {
-            @extend %text-color-active-4;
+
+            &.active-btn {
+                @extend %text-color-active-4;
+            }
         }
     }
 

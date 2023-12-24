@@ -147,7 +147,7 @@
         &_drop-down {
             @include size(1.875rem);
 
-            &-active {
+            &.active-btn {
                 @extend %text-color-active-2;
 
                 &::after {
