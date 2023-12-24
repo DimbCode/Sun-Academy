@@ -10,8 +10,16 @@ const dropDowns = document.querySelectorAll(".drop-down-btn");
 
 // Modal Windows Variables
 
-const buttons = document.querySelectorAll("button");
+const modalButtons = document.querySelectorAll("button[data-modal]");
 const modalWindows = document.querySelectorAll("div[data-modal]");
+
+// Carts Variables
+
+const countButtons = document.querySelectorAll("button[data-count]");
+
+// Search Variables
+
+const searchButtons = document.querySelectorAll(".header__search-btn");
 
 // Functions
 
@@ -51,18 +59,57 @@ dropDowns.forEach(item => {
     });
 });
 
-buttons.forEach(item => {
+// Modal Windows Events
+
+modalButtons.forEach(item => {
     item.addEventListener("click", (event) => {
         const currentBtn = event.currentTarget;
 
-        if (currentBtn.getAttribute("data-modal")) {
-            Array.from(modalWindows).forEach(modal => modal.classList.add("none"));
-            
-            Array.from(modalWindows).forEach(modal => {
-                if (modal.getAttribute("data-modal") == currentBtn.getAttribute("data-modal")) {
-                    modal.classList.remove("none");
+        Array.from(modalWindows).forEach(modal => modal.classList.add("none"));
+        
+        Array.from(modalWindows).forEach(modal => {
+            if (modal.getAttribute("data-modal") == currentBtn.getAttribute("data-modal")) {
+                modal.classList.remove("none");
+            }
+        });
+    });
+});
+
+// Cart Buttons Windows
+
+countButtons.forEach(item => {
+    item.addEventListener("click", (event) => {
+        const currentBtn = event.currentTarget;
+        const cartCounts = document.querySelectorAll("*[data-count-count]");
+
+        cartCounts.forEach(item => {
+            if (item.getAttribute("data-count-name") == currentBtn.getAttribute("data-count-name")) {
+                if (currentBtn.getAttribute("data-count") == "false") {
+                    if (item.getAttribute("data-count-name") == "cart") {
+                        currentBtn.textContent = "В корзине";
+                    }
+                    currentBtn.setAttribute("data-count", "true");
+                    currentBtn.classList.add("btn-counted");
+                    item.textContent = +(item.textContent) + 1;
+                    item.setAttribute("data-count-count", item.getAttribute("data-count-count") + 1);
+                }   else {
+                    if (item.getAttribute("data-count-name") == "cart") {
+                        currentBtn.textContent = "В корзину";
+                    }
+                    currentBtn.setAttribute("data-count", "false");
+                    currentBtn.classList.remove("btn-counted");
+                    item.textContent = +(item.textContent) - 1;
+                    item.setAttribute("data-count-count", item.getAttribute("data-count-count") - 1);
                 }
-            });
-        }
+            }
+        });
+    });
+});
+
+// Search Events
+
+searchButtons.forEach(item => {
+    item.addEventListener("click", (event) => {
+        event.currentTarget.parentElement.classList.toggle("header__search_active");
     });
 });

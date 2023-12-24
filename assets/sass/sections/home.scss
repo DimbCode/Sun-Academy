@@ -41,7 +41,7 @@
             text-shadow: none;
         }
 
-        &_active {
+        &:hover {
             color: #250055;
             text-shadow: 1px 1px 4px rgba(255, 0, 229, 0.55);
         }
@@ -266,6 +266,17 @@
     &__details-link {
         @extend %btn;
         font-size: 1.3125rem;
+        color: #250055;
+        text-shadow: 1px 1px 2px rgba(36, 0, 255, 0.35);
+        border: 1px solid rgba(37, 0, 85, 0.90);
+        box-shadow: 1px 1px 2px 0px rgba(36, 0, 255, 0.35);
+        
+        &:hover {
+            color: #5B0086;
+            text-shadow: 1px 1px 5px rgba(250, 0, 255, 0.35);
+            box-shadow: 0px 2px 10px 0px $purple7;
+            border: 1px solid $purple11;
+        }
     }
 
     &__sale {
@@ -398,6 +409,15 @@
 
         &__icon-btn {
             @include size(1.5rem);
+
+            &_heart {
+
+                &.btn-counted {
+                    &::after {
+                        content: "\e90c";
+                    }
+                }
+            }
         }
 
         &__icon-btn-text {

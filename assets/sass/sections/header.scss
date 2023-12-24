@@ -86,10 +86,19 @@
     }
 
     &__active-link {
+        transition: 0s;
 
         &::after {
             color: #5516A6;
             filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
+        }
+
+        &:hover::after {
+            filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
+            background: linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
 
@@ -97,8 +106,38 @@
         position: relative;
     }
 
+    &__search {
+        display: flex;
+        align-items: center;
+
+        &-input {
+            display: none;
+            font-size: 1.5rem;
+            line-height: normal;
+            width: 100%;
+            padding: 0.3rem 1rem;
+        }
+
+        &_active {
+            max-width: 15rem;
+            width: 100%;
+            border: 2px solid #5516A6;
+            border-radius: 0.5rem;
+        }
+
+        &_active &-btn {
+            padding: 0.5rem;
+            border-left: 2px solid #5516A6;
+        }
+
+        &_active &-input {
+            display: block;
+        }
+    }
+
     &__active-link-pop-up {
         position: absolute;
+        min-width: 2.1875rem;
         top: 0;
         right: 0;
         transform: translate(50%, -50%);
@@ -135,46 +174,80 @@
             text-shadow: none;
         }
 
+        &:hover {
+            color: #8C007E;
+            text-shadow: 1px 1px 9px rgba(251, 34, 255, 0.50);
+        }
+
         &_active {
             padding: 0.8rem 2.38rem;
             border-radius: 2.5rem;
-            background: radial-gradient(90.36% 257.55% at 15.66% 38.53%, rgba(0, 240, 255, 0.85) 0%, rgba(0, 240, 255, 0) 37.59%), radial-gradient(56.63% 161.4% at 84.34% 66.06%, rgba(255, 0, 230, 0.85) 0%, rgba(255, 80, 237, 0.85) 0.01%, rgba(255, 0, 230, 0) 76.06%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(275.91deg, #0030AC 2.96%, #6800CF 98.09%);
+            background: radial-gradient(90.36% 257.55% at 15.66% 38.53%, rgba(0, 240, 255, 0.85) 0%, rgba(0, 240, 255, 0) 37.59%), radial-gradient(56.63% 161.4% at 84.34% 66.06%, rgba(255, 0, 230, 0.85) 0%, rgba(255, 80, 237, 0.85) 0.01%, rgba(255, 0, 230, 0) 76.06%), linear-gradient(275.91deg, #0030AC 2.96%, #6800CF 98.09%);
             border: 1px solid rgba(255, 255, 255, 0.05);
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15), inset 0px 3px 4px rgba(255, 255, 255, 0.48);
             color: $white;
             text-shadow: 
-                -0   -1.4px 0   $purple8,
-                0   -1.4px 0   $purple8,
-                -0    1.4px 0   $purple8,
-                0    1.4px 0   $purple8,
-                -1.4px -0   0   $purple8,
-                1.4px -0   0   $purple8,
-                -1.4px  0   0   $purple8,
-                1.4px  0   0   $purple8,
-                -1.4px -1.4px 0   $purple8,
-                1.4px -1.4px 0   $purple8,
-                -1.4px  1.4px 0   $purple8,
-                1.4px  1.4px 0   $purple8,
-                -1.4px -1.4px 0   $purple8,
-                1.4px -1.4px 0   $purple8,
-                -1.4px  1.4px 0   $purple8,
-                1.4px  1.4px 0   $purple8,
-                -1.4px -1.4px 0   $purple8,
-                1.4px -1.4px 0   $purple8,
-                -1.4px  1.4px 0   $purple8,
-                1.4px  1.4px 0   $purple8,
-                -1.4px -1.4px 0   $purple8,
-                1.4px -1.4px 0   $purple8,
-                -1.4px  1.4px 0   $purple8,
-                1.4px  1.4px 0   $purple8;
+                -0   -1.4px 0   $purple15,
+                0   -1.4px 0   $purple15,
+                -0    1.4px 0   $purple15,
+                0    1.4px 0   $purple15,
+                -1.4px -0   0   $purple15,
+                1.4px -0   0   $purple15,
+                -1.4px  0   0   $purple15,
+                1.4px  0   0   $purple15,
+                -1.4px -1.4px 0   $purple15,
+                1.4px -1.4px 0   $purple15,
+                -1.4px  1.4px 0   $purple15,
+                1.4px  1.4px 0   $purple15,
+                -1.4px -1.4px 0   $purple15,
+                1.4px -1.4px 0   $purple15,
+                -1.4px  1.4px 0   $purple15,
+                1.4px  1.4px 0   $purple15,
+                -1.4px -1.4px 0   $purple15,
+                1.4px -1.4px 0   $purple15,
+                -1.4px  1.4px 0   $purple15,
+                1.4px  1.4px 0   $purple15,
+                -1.4px -1.4px 0   $purple15,
+                1.4px -1.4px 0   $purple15,
+                -1.4px  1.4px 0   $purple15,
+                1.4px  1.4px 0   $purple15;
+
+            &:hover {
+                color: $white;
+                background: radial-gradient(90.36% 257.55% at 15.66% 38.53%, rgba(0, 240, 255, 0.85) 0%, rgba(0, 240, 255, 0) 37.59%), radial-gradient(56.63% 161.4% at 84.34% 66.06%, rgba(255, 0, 230, 0.85) 0%, rgba(255, 80, 237, 0.85) 0.01%, rgba(255, 0, 230, 0) 76.06%), linear-gradient(275.91deg, #0030AC 2.96%, #6800CF 98.09%);
+                text-shadow: 
+                    -0   -1.4px 0   $purple8,
+                    0   -1.4px 0   $purple8,
+                    -0    1.4px 0   $purple8,
+                    0    1.4px 0   $purple8,
+                    -1.4px -0   0   $purple8,
+                    1.4px -0   0   $purple8,
+                    -1.4px  0   0   $purple8,
+                    1.4px  0   0   $purple8,
+                    -1.4px -1.4px 0   $purple8,
+                    1.4px -1.4px 0   $purple8,
+                    -1.4px  1.4px 0   $purple8,
+                    1.4px  1.4px 0   $purple8,
+                    -1.4px -1.4px 0   $purple8,
+                    1.4px -1.4px 0   $purple8,
+                    -1.4px  1.4px 0   $purple8,
+                    1.4px  1.4px 0   $purple8,
+                    -1.4px -1.4px 0   $purple8,
+                    1.4px -1.4px 0   $purple8,
+                    -1.4px  1.4px 0   $purple8,
+                    1.4px  1.4px 0   $purple8,
+                    -1.4px -1.4px 0   $purple8,
+                    1.4px -1.4px 0   $purple8,
+                    -1.4px  1.4px 0   $purple8,
+                    1.4px  1.4px 0   $purple8;
+            }
+            
         }
 
         &_drop-down {
             @include size(1.875rem);
 
             &.active-btn {
-                color: #8C007E;
-                text-shadow: 1px 1px 9px rgba(251, 34, 255, 0.50);
 
                 &::after {
                     transform: rotate(-180deg);
@@ -202,6 +275,11 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        &:hover {
+            color: #5B0086;
+            text-shadow: 1px 1px 5px rgba(250, 0, 255, 0.35);
         }
     }
 

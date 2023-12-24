@@ -57,6 +57,8 @@
         position: absolute;
         top: 1.25rem;
         right: 1.25rem;
+        color: #5516A6;
+        filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
     }
 
     &__content-wrapper {
@@ -83,10 +85,20 @@
         @extend %icon-text;
         @include size(2.5rem);
         flex-direction: row-reverse;
+        display: inline-flex;
         gap: 0.94rem;
         font-size: 2rem;
         font-weight: $medium;
         margin-bottom: 3.75rem;
+
+        &::after {
+            filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
+            background: linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+        }
 
         &_mini {
             font-size: 1.625rem;
@@ -222,6 +234,15 @@
         @extend %btn;
         @extend %icon-text;
         gap: 0.75rem;
+
+        &::after {
+            filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
+            background: linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+        }
     }
 }
 
