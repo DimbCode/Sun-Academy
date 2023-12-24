@@ -345,6 +345,10 @@
     border-radius: 0.5rem;
     z-index: 1;
 
+    &_all-width {
+        width: 100%;
+    }
+
     &__list {
         display: flex;
         flex-direction: column;

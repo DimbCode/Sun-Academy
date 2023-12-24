@@ -240,7 +240,10 @@
 // .ic-trash {
 //     @include icon("../images/trash.svg");
 // }
-  
+
+.ic-menu:after {
+    content: "\e916";
+  }
 .ic-stick:after {
     content: "\e918";
   }

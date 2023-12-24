@@ -13,6 +13,7 @@
     }
 
     &__header-section {
+        position: relative;
 
         &_buttons {
             gap: 1.75rem;
@@ -230,9 +231,10 @@
 
     &__icon-btn-text {
         position: absolute;
-        top: 0.3rem;
-        left: 0.4rem;
-        font-size: 1.3125rem;
+        top: 0.18rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 1.2125rem;
         font-weight: $medium;
     }
 
@@ -400,7 +402,6 @@
 
         &__icon-btn-text {
             top: 0.2rem;
-            left: 0.3rem;
             font-size: 0.7rem;
         }
 

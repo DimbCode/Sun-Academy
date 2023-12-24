@@ -5,6 +5,9 @@
     overflow: auto;
     max-height: 83rem;
     padding-right: 1.8rem;
+    position: sticky;
+    left: 0;
+    top: 1.5rem;
 
     &__link-list {
         display: flex;
@@ -27,21 +30,25 @@
         &_drop-down {
             width: 100%;
             position: relative;
+            @include size(1.5625rem);
 
             &::after {
                 position: absolute;
                 right: 0;
                 top: 50%;
                 transform: translate(0, -50%);
-                background-color: $white;
-                background-size: 1.5625rem;
                 border-radius: 50%;
-                border: 1px solid $purple11;
-                box-shadow: 1px 1px 5px $brown1;
+                padding: 0.31rem;
+                box-shadow: 1px 1px 5px #926A8E;
+                background: linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
 
             &.active-btn::after {
                 transform: translate(0, -50%) rotate(180deg);
+                padding-bottom: 0.2rem;
             }
 
 
@@ -79,6 +86,7 @@
         font-size: 1.5625rem;
         font-weight: $semibold;
         line-height: 2rem;
+        text-align: left;
     }
 }
 
