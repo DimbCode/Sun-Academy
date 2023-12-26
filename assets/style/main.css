@@ -1405,6 +1405,7 @@ a, button {
   font-size: 1.8125rem;
   font-weight: 800;
   letter-spacing: 0.09063rem;
+  -webkit-text-stroke: 0.3px rgb(28, 32, 78);
 }
 .home__filter-btn {
   -webkit-box-shadow: 1px 1px 4px 0px rgba(255, 0, 229, 0.25);
@@ -1594,6 +1595,7 @@ a, button {
   text-shadow: 2px 2px 4px rgba(175, 0, 221, 0.25);
   position: relative;
   bottom: 0;
+  -webkit-text-stroke: 0.2px rgb(130, 0, 233);
   -webkit-transition: 0s;
   transition: 0s;
 }
@@ -2231,6 +2233,7 @@ a, button {
   background-clip: text;
   text-fill-color: transparent;
   text-shadow: 0px 2px 2px rgba(175, 0, 221, 0.55);
+  -webkit-text-stroke: 0.5px rgb(28, 32, 78);
   font-size: 1.0625rem;
   font-weight: 700;
   letter-spacing: 0.04125rem;

@@ -79,6 +79,7 @@
         font-size: 1.8125rem;
         font-weight: $extrabold;
         letter-spacing: 0.09063rem;
+        -webkit-text-stroke: 0.3px rgba(28, 32, 78, 1);
     }
 
     &__filter-btn {
@@ -298,6 +299,7 @@
         text-shadow: 2px 2px 4px rgba(175, 0, 221, 0.25);
         position: relative;
         bottom: 0;
+        -webkit-text-stroke: 0.2px rgba(130, 0, 233, 1);
         transition: 0s;
 
         &:hover {
