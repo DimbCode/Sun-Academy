@@ -7,6 +7,7 @@ const slider = document.querySelector(".modal-window__range");
 // Drop-Downs Variables
 
 const dropDowns = document.querySelectorAll(".drop-down-btn");
+const overDropDowns = document.querySelectorAll(".drop-down-btn_over");
 
 // Modal Windows Variables
 
@@ -21,11 +22,36 @@ const countButtons = document.querySelectorAll("button[data-count]");
 
 const searchButtons = document.querySelectorAll(".header__search-btn");
 
+// Filter Variables
+
+const filterButtons = document.querySelectorAll(".modal-window__filter-btn");
+
+// Header Variables
+
+const headerHeight = document.querySelector(".header").offsetHeight + parseFloat(getComputedStyle(document.querySelector(".wrapper")).gap);
+const wrapper = document.querySelector(".wrapper__wrapper");
+
+wrapper.style.paddingTop = headerHeight + "px";
+
+// System Variables
+
+const resolve = document.documentElement.offsetWidth;
+
 // Functions
 
 function toggleDropDown(elem, currentEl, activeCl) {
     elem.classList.toggle("none");
     currentEl.classList.toggle(activeCl);
+}
+
+function openDropDown(elem, currentEl, activeCl) {
+    elem.classList.remove("none");
+    currentEl.classList.add(activeCl);
+}
+
+function hiddenDropDown(elem, currentEl, activeCl) {
+    elem.classList.add("none");
+    currentEl.classList.remove(activeCl);
 }
 
 // Range Events
@@ -51,11 +77,72 @@ slider.noUiSlider.on("update", () => {
 
 dropDowns.forEach(item => {
     item.addEventListener("click", (event) => {
-        const dropDown = event.currentTarget.nextElementSibling;
+        let dropDown = event.currentTarget.nextElementSibling;
 
-        toggleDropDown(dropDown, event.currentTarget, "active-btn");
+        if (event.currentTarget.classList.contains("side-panel__link-drop-down-item")) {
+            dropDown = event.currentTarget.parentElement.nextElementSibling;
+            toggleDropDown(dropDown, event.currentTarget.parentElement, "active-btn");
+        }   else {
+            toggleDropDown(dropDown, event.currentTarget, "active-btn");
+        }
     });
 });
+
+if (resolve <= 768) {
+
+    overDropDowns.forEach(item => {
+        item.addEventListener("click", (event) => {
+            const dropDown = event.currentTarget.nextElementSibling;
+            toggleDropDown(dropDown, event.currentTarget, "active-btn");
+        });
+    });
+
+}   else {
+    let dropDownLists = document.querySelectorAll(".drop-down-list_over");
+
+    dropDownLists.forEach(item => item.setAttribute("data-open", "false"));
+
+    overDropDowns.forEach(item => {
+        item.addEventListener("mouseenter", (event) => {
+            const dropDown = event.currentTarget.nextElementSibling;
+            openDropDown(dropDown, event.currentTarget, "active-btn");
+        });
+    });
+
+    overDropDowns.forEach(item => {
+        item.addEventListener("mouseleave", (event) => {
+            const dropDown = event.currentTarget.nextElementSibling;
+            const currentBtn = event.currentTarget;
+
+            setTimeout(function () {
+                if (dropDown.getAttribute("data-open") == "false") {
+                    hiddenDropDown(dropDown, currentBtn, "active-btn");
+                }
+            }, 500);
+            
+        });
+    });
+
+    dropDownLists.forEach(item => {
+        item.addEventListener("mouseenter", (event) => {
+            const currentBtn = event.currentTarget.closest(".drop-down-list").previousElementSibling;
+            
+            event.currentTarget.setAttribute("data-open", "true");
+            openDropDown(event.currentTarget, currentBtn, "active-btn");
+        });
+    })
+
+    dropDownLists.forEach(item => {
+        item.addEventListener("mouseleave", (event) => {
+            const currentBtn = event.currentTarget.closest(".drop-down-list").previousElementSibling;
+            event.currentTarget.setAttribute("data-open", "false");
+
+            hiddenDropDown(event.currentTarget, currentBtn, "active-btn");
+        });
+    })
+}
+
+
 
 // Modal Windows Events
 
@@ -94,6 +181,7 @@ countButtons.forEach(item => {
         if (btnAttrValue == "false") {
             if (btnAttrName == "cart") {
                 currentBtn.textContent = "В корзине";
+                currentBtn.classList.add("service__cart-btn_in");
             }
             
             currentBtn.setAttribute("data-count", "true");
@@ -106,6 +194,7 @@ countButtons.forEach(item => {
         }   else {
             if (btnAttrName == "cart") {
                 currentBtn.textContent = "В корзину";
+                currentBtn.classList.remove("service__cart-btn_in");
             }
 
             currentBtn.setAttribute("data-count", "false");
@@ -124,5 +213,13 @@ countButtons.forEach(item => {
 searchButtons.forEach(item => {
     item.addEventListener("click", (event) => {
         event.currentTarget.parentElement.classList.toggle("header__search_active");
+    });
+});
+
+// Filter Events
+
+filterButtons.forEach(item => {
+    item.addEventListener("click", (event) => {
+        event.currentTarget.classList.toggle("modal-window__filter-btn_active");
     });
 });

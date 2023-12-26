@@ -7,12 +7,13 @@
     padding-right: 1.8rem;
     position: sticky;
     left: 0;
-    top: 1.5rem;
+    top: 0;
 
     &__link-list {
         display: flex;
         flex-direction: column;
         gap: 1.25rem;
+        padding: 1.25rem 0;
     }
 
     &__link {
@@ -39,25 +40,50 @@
         &_drop-down {
             width: 100%;
             position: relative;
+
+            // &::after {
+            //     position: absolute;
+            //     right: 0;
+            //     top: 50%;
+            //     transform: translate(0, -50%);
+            //     border-radius: 50%;
+            //     padding: 0.31rem;
+            //     box-shadow: 1px 1px 5px #926A8E;
+            //     background: linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
+            //     background-clip: text;
+            //     -webkit-background-clip: text;
+            //     -webkit-text-fill-color: transparent;
+            // }
+
+            &.active-btn .side-panel__link-drop-down-item::after {
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+        }
+
+        &-drop-down-item {
             @include size(1.5625rem);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 2.1875rem;
+            height: 2.1875rem;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            border-radius: 50%;
+            padding: 0.31rem;
+            box-shadow: 1px 1px 5px #926A8E;
 
             &::after {
                 position: absolute;
-                right: 0;
                 top: 50%;
-                transform: translate(0, -50%);
-                border-radius: 50%;
-                padding: 0.31rem;
-                box-shadow: 1px 1px 5px #926A8E;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 background: linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-            }
-
-            &.active-btn::after {
-                transform: translate(0, -50%) rotate(180deg);
-                padding-bottom: 0.2rem;
             }
         }
     }

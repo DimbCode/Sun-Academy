@@ -18,6 +18,21 @@
     padding: 0 1rem;
     transition: .5s;
 
+    ::-webkit-scrollbar {
+        width: 17px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background-color: #FFF2FE;
+        border-radius: 0;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        box-shadow: none;
+        background: linear-gradient(180deg, rgba(233, 187, 255, 1), rgba(192, 221, 255, 1), rgba(233, 187, 255, 1));
+        border-radius: 20px;
+    }
+
     &__wrapper {
         max-height: 100vh;
         border-radius: 0.9375rem;
@@ -74,6 +89,7 @@
         max-height: 100%;
         height: 50rem;
         overflow: auto;
+        overflow-x: hidden;
     }
 
     &__section-title {
@@ -93,6 +109,7 @@
         margin-bottom: 3.75rem;
 
         &::after {
+            filter: drop-shadow(1px 1px 4px rgba(255, 0, 229, 0.25));
             filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
             background: linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
             background-clip: text;
@@ -172,6 +189,9 @@
         border: 1px solid rgba(255, 255, 255, 0.05);
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15), inset 0px 3px 4px rgba(255, 255, 255, 0.48);
         color: $white;
+        position: relative;
+        bottom: 0;
+        transition: 0s;
         text-shadow: 
             -0   -1.4px 0   $purple15,
             0   -1.4px 0   $purple15,
@@ -200,6 +220,7 @@
 
         &:hover {
             box-shadow: 0px 2px 10px 0px rgba(255, 0, 229, 0.60);
+            bottom: 0.13rem;
             text-shadow: 
                     -0   -1.4px 0   $purple8,
                     0   -1.4px 0   $purple8,
@@ -237,6 +258,7 @@
 
     &__filter-btn {
         @extend %btn-quadro;
+        letter-spacing: normal;
         font-size: 1.5625rem;
         font-family: $thirdFont;
         padding: 0.75rem 0.94rem;
@@ -246,7 +268,7 @@
         }
 
         &_active {
-            background: $pink6;
+            background: $pink6 !important;
         }
     }
 
@@ -254,7 +276,7 @@
         padding: 2rem;
         text-align: center;
         background: $pink4;
-        border-bottom: 2px solid $pink1;
+        border-top: 2px solid $pink1;
         display: flex;
         justify-content: flex-end;
         gap: 1.75rem;
@@ -283,7 +305,7 @@
 }
 
 .input {
-    padding: 1.19rem 2.56rem 1.19rem 1.56rem;
+    padding: 0.69rem 2.5rem 0.69rem 1.5rem;
     border-radius: 0.9375rem;
     border: 1px solid $purple11;
     background: $white;
@@ -301,6 +323,7 @@
         font-family: $thirdFont;
         font-size: 1.75rem;
         letter-spacing: 0.035rem;
+        line-height: normal;
     }
 
     &__input {
@@ -332,10 +355,12 @@
 
     &__skip-btn {
         @extend %icon-btn;
-        @include size(1.2rem);
+        @include size(2rem);
         position: absolute;
-        top: 1rem;
-        right: 1rem;
+        top: 1.25rem;
+        right: 1.25rem;
+        color: #5516A6;
+        filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
     }
 
     &__section-title {
@@ -363,6 +388,8 @@
     &__soc-link {
         @extend %icon-btn;
         @include size(1.5rem);
+        color: #5516A6;
+        filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
     }
 
     &__list {
@@ -397,29 +424,51 @@
     position: absolute;
     top: calc(100% + 0.5rem);
     left: 0;
-    padding: 1rem;
     background: $white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 0.5rem;
-    z-index: 1;
+    border-radius: 0.9375rem;
+    box-shadow: 1px 1px 15px 0px $pink3;
+    border: 1px solid $pink1;
+    z-index: 2;
+    overflow: hidden;
     transition: .5s;
 
     &_all-width {
         width: 100%;
     }
 
+    &_all-width &__list {
+        max-width: 100%;
+        width: 100%;
+    }
+
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
         max-width: 13rem;
         width: 13rem;
+
+        & > *:not(:last-child) {
+            border-bottom: 2px solid $brown2;
+        }
+    }
+
+    &__item {
+        display: block;
+        width: 100%;
     }
 
     &__link {
+        display: block;
         color: $primaryColor;
         text-shadow: 1px 1px 4px $gray1;
-        font-size: 1.5rem;
+        padding: 0.7rem 1rem;
+        font-size: 1.5625rem;
+        font-family: $thirdFont;
+        padding: 0.75rem 0.94rem;
+
+        &:hover {
+            background: $pink5;
+        }
     }
 }
 
