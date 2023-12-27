@@ -1488,6 +1488,17 @@ a, button {
 .service__section {
   position: relative;
 }
+.service__section_img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(1%, #fff), color-stop(5%, transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(1%, #fff), color-stop(5%, transparent)), -webkit-gradient(linear, right top, left top, color-stop(1%, #fff), color-stop(5%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(1%, #fff), color-stop(5%, transparent));
+  background: linear-gradient(90deg, #fff 1%, transparent 5%), linear-gradient(180deg, #fff 1%, transparent 5%), linear-gradient(-90deg, #fff 1%, transparent 5%), linear-gradient(0deg, #fff 1%, transparent 5%);
+  border-radius: 0.9375rem;
+}
 .service__section_middle {
   height: 3.81rem;
   text-align: center;

@@ -167,18 +167,20 @@
 
         &_img {
 
-            // &::before {
-            //     content: "";
-            //     position: absolute;
-            //     top: 0;
-            //     left: 0;
-            //     width: 100%;
-            //     height: 100%;
-            //     border-width: 0.94rem;
-            //     border-style: solid;
-            //     border-image-slice: 1;
-            //     z-index: 1;
-            // }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                // border-width: 0.94rem;
+                // border-style: solid;
+                // border-image-slice: 1;
+                // z-index: 1;
+                background: linear-gradient(90deg, #fff 1%, transparent 5%), linear-gradient(180deg, #fff 1%, transparent 5%), linear-gradient(-90deg, #fff 1%, transparent 5%), linear-gradient(0deg, #fff 1%, transparent 5%);
+                border-radius: 0.9375rem;
+            }
         }
 
         &_middle {
