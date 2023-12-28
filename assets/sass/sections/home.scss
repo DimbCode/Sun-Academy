@@ -88,6 +88,8 @@
         @include size(1.5625rem);
         box-shadow: 1px 1px 4px 0px rgba(255, 0, 229, 0.25);
         gap: 1.62rem;
+        min-width: 20rem;
+        justify-content: space-between;
 
         &:hover {
             text-shadow: 1px 1px 4px rgba(36, 0, 255, 0.25);
@@ -488,11 +490,19 @@
             font-size: 1rem;
             padding: 0.5rem 1rem;
             gap: 0.5rem;
+            min-width: 15rem;
 
             &-text {
-                &::after {
-                    display: none;
-                }
+                @include size(1.5rem);
+            }
+        }
+
+        &__filter-btn + .drop-down-list {
+            border-radius: 0.9375rem;
+    
+            .drop-down-list__link {
+                font-size: 1rem;
+                @include size(1.5rem);
             }
         }
 

@@ -666,7 +666,7 @@ a, button {
   cursor: pointer;
 }
 
-.drop-down__list-link_drop-down, .modal-window__btn, .modal-window__section-title, .home__filter-btn-text, .home__filter-btn, .side-panel__link, .header__bottom-list-link, .header__middle-list-link {
+.drop-down-list__link, .drop-down__list-link_drop-down, .modal-window__btn, .modal-window__section-title, .home__filter-btn-text, .home__filter-btn, .side-panel__link, .header__bottom-list-link, .header__middle-list-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -676,7 +676,7 @@ a, button {
   gap: 0.25rem;
   line-height: normal;
 }
-.drop-down__list-link_drop-down::after, .modal-window__btn::after, .modal-window__section-title::after, .home__filter-btn-text::after, .home__filter-btn::after, .side-panel__link::after, .header__bottom-list-link::after, .header__middle-list-link::after {
+.drop-down-list__link::after, .drop-down__list-link_drop-down::after, .modal-window__btn::after, .modal-window__section-title::after, .home__filter-btn-text::after, .home__filter-btn::after, .side-panel__link::after, .header__bottom-list-link::after, .header__middle-list-link::after {
   display: inline-block;
   vertical-align: middle;
 }
@@ -716,11 +716,7 @@ a, button {
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
   padding-top: 0.56rem;
-  padding-bottom: 1.56rem;
   width: 100%;
   z-index: 100;
   background: white;
@@ -732,6 +728,7 @@ a, button {
   grid-template-columns: 1fr;
 }
 .header__top {
+  width: 100%;
   margin-bottom: 1.25rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -792,8 +789,35 @@ a, button {
           justify-content: space-between;
   gap: 1.5rem;
 }
+.header__middle_scroll {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 1rem 0;
+}
+.header__middle_scroll .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header__middle .container {
+  width: 100%;
+}
 .header__middle-section_soc-links {
   gap: 2.31rem;
+}
+.header__scroll-section-mobile {
+  display: none !important;
 }
 .header__middle-list-item {
   position: relative;
@@ -957,9 +981,11 @@ a, button {
   font-size: 1.8125rem;
   font-weight: 600;
   letter-spacing: 0.03625rem;
+  position: relative;
   text-shadow: 0 -1.4px 0 rgba(36, 0, 255, 0.25), 0 -1.4px 0 rgba(36, 0, 255, 0.25), 0 1.4px 0 rgba(36, 0, 255, 0.25), 0 1.4px 0 rgba(36, 0, 255, 0.25), -1.4px 0 0 rgba(36, 0, 255, 0.25), 1.4px 0 0 rgba(36, 0, 255, 0.25), -1.4px 0 0 rgba(36, 0, 255, 0.25), 1.4px 0 0 rgba(36, 0, 255, 0.25), -1.4px -1.4px 0 rgba(36, 0, 255, 0.25), 1.4px -1.4px 0 rgba(36, 0, 255, 0.25), -1.4px 1.4px 0 rgba(36, 0, 255, 0.25), 1.4px 1.4px 0 rgba(36, 0, 255, 0.25), -1.4px -1.4px 0 rgba(36, 0, 255, 0.25), 1.4px -1.4px 0 rgba(36, 0, 255, 0.25), -1.4px 1.4px 0 rgba(36, 0, 255, 0.25), 1.4px 1.4px 0 rgba(36, 0, 255, 0.25), -1.4px -1.4px 0 rgba(36, 0, 255, 0.25), 1.4px -1.4px 0 rgba(36, 0, 255, 0.25), -1.4px 1.4px 0 rgba(36, 0, 255, 0.25), 1.4px 1.4px 0 rgba(36, 0, 255, 0.25), -1.4px -1.4px 0 rgba(36, 0, 255, 0.25), 1.4px -1.4px 0 rgba(36, 0, 255, 0.25), -1.4px 1.4px 0 rgba(36, 0, 255, 0.25), 1.4px 1.4px 0 rgba(36, 0, 255, 0.25);
 }
 .header__middle-list-link_active:hover {
+  bottom: 0.13rem;
   color: white;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15), inset 0px 3px 4px rgba(255, 255, 255, 0.48), 0px 2px 10px 0px rgba(255, 0, 229, 0.4);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15), inset 0px 3px 4px rgba(255, 255, 255, 0.48), 0px 2px 10px 0px rgba(255, 0, 229, 0.4);
@@ -1139,8 +1165,16 @@ a, button {
   .header__desktop-block {
     display: none;
   }
-  .header__middle, .header__bottom {
+  .header__middle:not(.header__middle_scroll), .header__bottom {
     display: none;
+  }
+  .header__scroll-section-mobile {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .header__scroll-section-desktop {
+    display: none !important;
   }
 }
 @media all and (max-width: 700px) {
@@ -1411,6 +1445,10 @@ a, button {
   -webkit-box-shadow: 1px 1px 4px 0px rgba(255, 0, 229, 0.25);
           box-shadow: 1px 1px 4px 0px rgba(255, 0, 229, 0.25);
   gap: 1.62rem;
+  min-width: 20rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .home__filter-btn::after {
   font-size: 1.5625rem !important;
@@ -1760,12 +1798,22 @@ a, button {
     font-size: 1rem;
     padding: 0.5rem 1rem;
     gap: 0.5rem;
+    min-width: 15rem;
   }
   .home__filter-btn::after {
     font-size: 1rem !important;
   }
   .home__filter-btn-text::after {
-    display: none;
+    font-size: 1.5rem !important;
+  }
+  .home__filter-btn + .drop-down-list {
+    border-radius: 0.9375rem;
+  }
+  .home__filter-btn + .drop-down-list .drop-down-list__link {
+    font-size: 1rem;
+  }
+  .home__filter-btn + .drop-down-list .drop-down-list__link::after {
+    font-size: 1.5rem !important;
   }
   .home__btn {
     gap: 0.35rem;
@@ -2339,6 +2387,22 @@ a, button {
   font-size: 1.5625rem;
   font-family: "Fira Sans Extra Condensed";
   padding: 0.75rem 0.94rem;
+}
+.drop-down-list__link_reverse::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.drop-down-list__link::after {
+  -webkit-filter: drop-shadow(1px 1px 4px rgba(255, 0, 229, 0.25));
+          filter: drop-shadow(1px 1px 4px rgba(255, 0, 229, 0.25));
+  -webkit-filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
+          filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
+  background: -webkit-gradient(linear, left top, left bottom, from(#005DCC), to(#8800C7));
+  background: linear-gradient(180deg, #005DCC 0%, #8800C7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
 }
 .drop-down-list__link:hover {
   background: rgba(255, 242, 254, 0.75);
