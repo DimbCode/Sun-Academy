@@ -773,13 +773,15 @@ a, button {
 .header__top-list-item:not(:last-child)::after {
   content: "|";
   color: #250055;
-  text-shadow: 1px 1px 2px rgba(130, 0, 233, 0.35);
+  -webkit-filter: drop-shadow(1px 1px 2px rgba(130, 0, 233, 0.35));
+          filter: drop-shadow(1px 1px 2px rgba(130, 0, 233, 0.35));
   font-size: 1.375rem;
   display: inline-block;
 }
 .header__top-list-link {
   color: #250055;
-  text-shadow: 1px 1px 2px rgba(130, 0, 233, 0.35);
+  -webkit-filter: drop-shadow(1px 1px 2px rgba(130, 0, 233, 0.35));
+          filter: drop-shadow(1px 1px 2px rgba(130, 0, 233, 0.35));
   font-size: 1.375rem;
 }
 .header__middle {
@@ -947,7 +949,8 @@ a, button {
 }
 .header__middle-list-link {
   color: #5516A6;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.35);
+  -webkit-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.35));
+          filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.35));
   font-family: "Fira Sans Extra Condensed";
   font-size: 2.0625rem;
   font-weight: 500;
@@ -968,7 +971,8 @@ a, button {
 }
 .header__middle-list-link:hover {
   color: #8C007E;
-  text-shadow: 1px 1px 9px rgba(251, 34, 255, 0.5);
+  -webkit-filter: drop-shadow(1px 1px 9px rgba(251, 34, 255, 0.5));
+          filter: drop-shadow(1px 1px 9px rgba(251, 34, 255, 0.5));
 }
 .header__middle-list-link_active {
   padding: 0.8rem 2.38rem;
@@ -1006,7 +1010,8 @@ a, button {
 }
 .header__bottom-list-link {
   color: #250055;
-  text-shadow: 1px 1px 2px rgba(130, 0, 233, 0.35);
+  -webkit-filter: drop-shadow(1px 1px 2px rgba(130, 0, 233, 0.35));
+          filter: drop-shadow(1px 1px 2px rgba(130, 0, 233, 0.35));
   font-size: 1.375rem;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -1025,7 +1030,8 @@ a, button {
 }
 .header__bottom-list-link:hover {
   color: #5B0086;
-  text-shadow: 1px 1px 5px rgba(250, 0, 255, 0.35);
+  -webkit-filter: drop-shadow(1px 1px 5px rgba(250, 0, 255, 0.35));
+          filter: drop-shadow(1px 1px 5px rgba(250, 0, 255, 0.35));
 }
 .header__bottom-list-link:hover::after {
   -webkit-filter: drop-shadow(1px 1px 15px rgba(255, 0, 229, 0.35));
@@ -1219,7 +1225,8 @@ a, button {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  text-shadow: 0px 2px 2px rgba(175, 0, 221, 0.55);
+  -webkit-filter: drop-shadow(0px 2px 2px rgba(175, 0, 221, 0.55));
+          filter: drop-shadow(0px 2px 2px rgba(175, 0, 221, 0.55));
   gap: 0.75rem;
   font-size: 1.8125rem;
   font-weight: 500;
@@ -1230,7 +1237,8 @@ a, button {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  text-shadow: 0px 1px 8px rgba(251, 34, 255, 0.55);
+  -webkit-filter: drop-shadow(0px 1px 8px rgba(251, 34, 255, 0.55));
+          filter: drop-shadow(0px 1px 8px rgba(251, 34, 255, 0.55));
 }
 .side-panel__link_drop-down {
   width: 100%;
@@ -1298,7 +1306,8 @@ a, button {
 }
 .side-panel__nested-list-link {
   color: #250055;
-  text-shadow: 1px 1px 2px rgba(130, 0, 233, 0.35);
+  -webkit-filter: drop-shadow(1px 1px 2px rgba(130, 0, 233, 0.35));
+          filter: drop-shadow(1px 1px 2px rgba(130, 0, 233, 0.35));
   font-size: 1.5625rem;
   font-weight: 600;
   line-height: 2rem;
@@ -1306,7 +1315,8 @@ a, button {
 }
 .side-panel__nested-list-link:hover {
   color: #5B0086;
-  text-shadow: 0px 1px 8px rgba(250, 0, 255, 0.4);
+  -webkit-filter: drop-shadow(0px 1px 8px rgba(250, 0, 255, 0.4));
+          filter: drop-shadow(0px 1px 8px rgba(250, 0, 255, 0.4));
 }
 
 @media all and (max-width: 2350px) {
@@ -1410,7 +1420,8 @@ a, button {
 }
 .home__btn:hover {
   color: #250055;
-  text-shadow: 1px 1px 4px rgba(255, 0, 229, 0.55);
+  -webkit-filter: drop-shadow(1px 1px 4px rgba(255, 0, 229, 0.55));
+          filter: drop-shadow(1px 1px 4px rgba(255, 0, 229, 0.55));
   border: 1px solid rgba(36, 0, 255, 0.45);
   -webkit-box-shadow: 0px 2px 10px 0px rgba(255, 0, 229, 0.55);
           box-shadow: 0px 2px 10px 0px rgba(255, 0, 229, 0.55);
@@ -1454,7 +1465,8 @@ a, button {
   font-size: 1.5625rem !important;
 }
 .home__filter-btn:hover {
-  text-shadow: 1px 1px 4px rgba(36, 0, 255, 0.25);
+  -webkit-filter: drop-shadow(1px 1px 4px rgba(36, 0, 255, 0.25));
+          filter: drop-shadow(1px 1px 4px rgba(36, 0, 255, 0.25));
 }
 .home__filter-btn::after {
   -webkit-filter: drop-shadow(1px 1px 4px rgba(255, 0, 229, 0.25));
@@ -1605,7 +1617,8 @@ a, button {
   font-weight: 500;
   line-height: 1.5rem;
   color: #250055;
-  text-shadow: 1px 1px 2px rgba(130, 0, 233, 0.35);
+  -webkit-filter: drop-shadow(1px 1px 2px rgba(130, 0, 233, 0.35));
+          filter: drop-shadow(1px 1px 2px rgba(130, 0, 233, 0.35));
 }
 .service__bottom-section {
   height: 100%;
@@ -1628,7 +1641,8 @@ a, button {
   font-family: "Fira Sans Extra Condensed";
   font-size: 2.0625rem;
   color: #250055;
-  text-shadow: 1px 1px 4px rgba(130, 0, 233, 0.35);
+  -webkit-filter: drop-shadow(1px 1px 4px rgba(130, 0, 233, 0.35));
+          filter: drop-shadow(1px 1px 4px rgba(130, 0, 233, 0.35));
 }
 .service__cart-btn {
   font-family: "Fira Sans Extra Condensed";
@@ -1641,7 +1655,8 @@ a, button {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  text-shadow: 2px 2px 4px rgba(175, 0, 221, 0.25);
+  -webkit-filter: drop-shadow(2px 2px 4px rgba(175, 0, 221, 0.25));
+          filter: drop-shadow(2px 2px 4px rgba(175, 0, 221, 0.25));
   position: relative;
   bottom: 0;
   -webkit-text-stroke: 0.2px rgb(130, 0, 233);
@@ -1652,7 +1667,8 @@ a, button {
   bottom: 0.1rem;
 }
 .service__cart-btn_in {
-  text-shadow: 1px 1px 6px rgba(255, 0, 229, 0.35);
+  -webkit-filter: drop-shadow(1px 1px 6px rgba(255, 0, 229, 0.35));
+          filter: drop-shadow(1px 1px 6px rgba(255, 0, 229, 0.35));
 }
 .service__icon-btn {
   position: relative;
@@ -1714,7 +1730,8 @@ a, button {
 }
 .service__notify .service__name {
   color: #3F008F !important;
-  text-shadow: 1px 1px 2px rgba(255, 0, 229, 0.65), 1px 1px 15px #FFFFFF !important;
+  -webkit-filter: drop-shadow(1px 1px 2px rgba(255, 0, 229, 0.65), 1px 1px 15px #FFFFFF !important);
+          filter: drop-shadow(1px 1px 2px rgba(255, 0, 229, 0.65), 1px 1px 15px #FFFFFF !important);
 }
 .service__description {
   font-size: 1.375rem;
@@ -1725,7 +1742,8 @@ a, button {
 .service__details-link {
   font-size: 1.3125rem;
   color: #250055;
-  text-shadow: 1px 1px 2px rgba(36, 0, 255, 0.35);
+  -webkit-filter: drop-shadow(1px 1px 2px rgba(36, 0, 255, 0.35));
+          filter: drop-shadow(1px 1px 2px rgba(36, 0, 255, 0.35));
   border: 1px solid rgba(37, 0, 85, 0.9);
   -webkit-box-shadow: 1px 1px 2px 0px rgba(36, 0, 255, 0.35);
           box-shadow: 1px 1px 2px 0px rgba(36, 0, 255, 0.35);
@@ -1734,7 +1752,8 @@ a, button {
 }
 .service__details-link:hover {
   color: #5B0086;
-  text-shadow: 1px 1px 5px rgba(250, 0, 255, 0.35);
+  -webkit-filter: drop-shadow(1px 1px 5px rgba(250, 0, 255, 0.35));
+          filter: drop-shadow(1px 1px 5px rgba(250, 0, 255, 0.35));
   -webkit-box-shadow: 0px 2px 10px 0px rgba(255, 0, 229, 0.55);
           box-shadow: 0px 2px 10px 0px rgba(255, 0, 229, 0.55);
   border: 1px solid rgba(91, 0, 134, 0.9);
@@ -1775,7 +1794,8 @@ a, button {
 }
 .service__last-price {
   color: rgba(185, 0, 0, 0.8);
-  text-shadow: 1px 1px 4px rgba(130, 0, 233, 0.35);
+  -webkit-filter: drop-shadow(1px 1px 4px rgba(130, 0, 233, 0.35));
+          filter: drop-shadow(1px 1px 4px rgba(130, 0, 233, 0.35));
   font-family: "Fira Sans Extra Condensed";
   font-size: 1.625rem;
   text-decoration: line-through;
@@ -1987,7 +2007,8 @@ a, button {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  text-shadow: 2px 2px 4px rgba(175, 0, 221, 0.25);
+  -webkit-filter: drop-shadow(2px 2px 4px rgba(175, 0, 221, 0.25));
+          filter: drop-shadow(2px 2px 4px rgba(175, 0, 221, 0.25));
   font-family: "Fira Sans Extra Condensed";
   font-size: 2.5rem;
   font-style: normal;
@@ -2023,7 +2044,8 @@ a, button {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  text-shadow: 0px 2px 2px rgba(175, 0, 221, 0.55);
+  -webkit-filter: drop-shadow(0px 2px 2px rgba(175, 0, 221, 0.55));
+          filter: drop-shadow(0px 2px 2px rgba(175, 0, 221, 0.55));
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -2183,7 +2205,8 @@ a, button {
   -webkit-box-shadow: 0px 2px 10px 0px rgba(255, 0, 229, 0.55);
           box-shadow: 0px 2px 10px 0px rgba(255, 0, 229, 0.55);
   color: #250055;
-  text-shadow: 1px 1px 4px rgba(255, 0, 229, 0.55);
+  -webkit-filter: drop-shadow(1px 1px 4px rgba(255, 0, 229, 0.55));
+          filter: drop-shadow(1px 1px 4px rgba(255, 0, 229, 0.55));
 }
 .modal-window__btn::after {
   -webkit-filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
@@ -2291,7 +2314,8 @@ a, button {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  text-shadow: 0px 2px 2px rgba(175, 0, 221, 0.55);
+  -webkit-filter: drop-shadow(0px 2px 2px rgba(175, 0, 221, 0.55));
+          filter: drop-shadow(0px 2px 2px rgba(175, 0, 221, 0.55));
   -webkit-text-stroke: 0.5px rgb(28, 32, 78);
   font-size: 1.0625rem;
   font-weight: 700;
@@ -2330,7 +2354,8 @@ a, button {
 }
 .drop-down__list-link {
   color: #5516A6;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.35);
+  -webkit-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.35));
+          filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.35));
 }
 .drop-down__list-link_drop-down::after {
   font-size: 1rem !important;
@@ -2382,7 +2407,8 @@ a, button {
 .drop-down-list__link {
   display: block;
   color: #5516A6;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.35);
+  -webkit-filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.35));
+          filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.35));
   padding: 0.7rem 1rem;
   font-size: 1.5625rem;
   font-family: "Fira Sans Extra Condensed";

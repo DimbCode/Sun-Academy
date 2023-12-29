@@ -8,7 +8,7 @@ const slider = document.querySelector(".modal-window__range");
 
 const dropDowns = document.querySelectorAll(".drop-down-btn");
 const overDropDowns = document.querySelectorAll(".drop-down-btn_over");
-const overLinks = document.querySelectorAll(".drop-down-list_over .drop-down-list__link");
+const overLinks = document.querySelectorAll(".home .drop-down-list_over .drop-down-list__link");
 
 // Modal Windows Variables
 
@@ -46,7 +46,7 @@ window.addEventListener("scroll", () => {
     if (document.documentElement.scrollTop >= wrapperHeight) {
         sidePanel.style.top = headerHeight2 + "px";
     }   else {
-        sidePanel.style.top = 0;
+        sidePanel.style.top = 20 + "px";
     }
 });
 
@@ -143,9 +143,7 @@ overLinks.forEach(item => {
 
         btn.textContent = event.currentTarget.textContent;
         event.preventDefault();
-
-        console.log(item, btn)
-
+        
         setIcon(item, btn);
     });
 });

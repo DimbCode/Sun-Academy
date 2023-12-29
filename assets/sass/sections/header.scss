@@ -56,7 +56,7 @@
         &::after {
             content: "|";
             color: #250055;
-            text-shadow: 1px 1px 2px rgba(130, 0, 233, 0.35);
+            filter: drop-shadow(1px 1px 2px rgba(130, 0, 233, 0.35));
             font-size: 1.375rem;
             display: inline-block;
         }
@@ -64,7 +64,7 @@
 
     &__top-list-link {
         color: #250055;
-        text-shadow: 1px 1px 2px rgba(130, 0, 233, 0.35);
+        filter: drop-shadow(1px 1px 2px rgba(130, 0, 233, 0.35));
         font-size: 1.375rem;
     }
 
@@ -204,7 +204,7 @@
 
     &__middle-list-link {
         color: #5516A6;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.35);
+        filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.35));
         @extend %icon-text;
         @include size(1.875rem);
         font-family: $thirdFont;
@@ -223,7 +223,7 @@
 
         &:hover {
             color: #8C007E;
-            text-shadow: 1px 1px 9px rgba(251, 34, 255, 0.50);
+            filter: drop-shadow(1px 1px 9px rgba(251, 34, 255, 0.50));
         }
 
         &_active {
@@ -315,7 +315,7 @@
 
     &__bottom-list-link {
         color: #250055;
-        text-shadow: 1px 1px 2px rgba(130, 0, 233, 0.35);
+        filter: drop-shadow(1px 1px 2px rgba(130, 0, 233, 0.35));
         @extend %icon-text;
         font-size: 1.375rem;
         flex-direction: row-reverse;
@@ -331,7 +331,7 @@
 
         &:hover {
             color: #5B0086;
-            text-shadow: 1px 1px 5px rgba(250, 0, 255, 0.35);
+            filter: drop-shadow(1px 1px 5px rgba(250, 0, 255, 0.35));
         }
 
         &:hover::after {
