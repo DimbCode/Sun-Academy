@@ -3,11 +3,22 @@
 .side-panel {
     width: 100%;
     overflow: auto;
-    max-height: 83rem;
     padding-right: 1.8rem;
+    padding-left: 0.7rem;
     position: sticky;
     left: 0;
     top: 0;
+    transition: .5s;
+
+    &__skip-btn {
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        color: #5516A6;
+        filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
+        z-index: 1;
+        display: none;
+    }
 
     &__link-list {
         display: flex;
@@ -194,6 +205,26 @@
                 margin-left: 3.5rem;
                 margin-top: 0;
             }
+        }
+    }
+
+}
+
+// Media 500px
+
+@media all and (max-width: 500px) {
+
+    .side-panel {
+        max-height: 100% !important;
+        height: 100%;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0;
+        z-index: 1000;
+        background: $white;
+
+        &__skip-btn {
+            display: inline-flex;
         }
     }
 

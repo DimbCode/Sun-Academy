@@ -6,6 +6,16 @@
     z-index: 100;
     background: $white;
 
+    ::-webkit-scrollbar {
+        height: 8px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 100px $pink1;
+        border-radius: 20px;
+        background: none;
+    }
+
     &__container {
         display: grid;
         grid-template-columns: 1fr;
@@ -308,9 +318,15 @@
         }
     }
 
+    &__bottom {
+        overflow: auto;
+    }
+
     &__bottom-list {
         gap: 3.69rem;
         justify-content: space-between;
+        flex-wrap: nowrap;
+        padding-bottom: 0.5rem;
     }
 
     &__bottom-list-link {
@@ -320,6 +336,7 @@
         font-size: 1.375rem;
         flex-direction: row-reverse;
         gap: 0.62rem;
+        white-space: nowrap;
 
         &::after {
             filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
@@ -342,6 +359,22 @@
     &__mobile-block {
         display: none;
     }
+
+    &__scroll-section-mobile {
+
+        .header__active-link {
+            @include size(2rem);
+        }
+
+        .header__middle-section {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .header__top-section_mobile-actions {
+            width: 100%;
+        }
+    }
 }
 
 // Media
@@ -349,6 +382,20 @@
 // Media 2350px
 
 @media all and (max-width: 2350px) {
+
+    .header {
+
+        &__bottom-list {
+            gap: 1rem;
+        }
+
+    }
+
+}
+
+// Media 1920px
+
+@media all and (max-width: 1920px) {
 
     .header {
 
@@ -369,11 +416,6 @@
             @include size(1.5rem);
         }
 
-        &__bottom-list {
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
         &__active-link {
             @include size(1.5rem);
         }
@@ -381,24 +423,6 @@
         &__active-link-pop-up {
             font-size: 0.8rem;
             min-width: 1.6875rem;
-        }
-
-    }
-
-}
-
-// Media 1920px
-
-@media all and (max-width: 1920px) {
-
-    .header {
-
-        &__logo {
-
-            &::before {
-                width: 21.5rem;
-                height: 4.30556rem;
-            }
         }
 
         &__top {
@@ -552,9 +576,12 @@
             display: none;
         }
 
-        &__middle:not(.header__middle_scroll),
-        &__bottom {
+        &__middle:not(.header__middle_scroll) {
             display: none;
+        }
+
+        &__bottom {
+            margin-top: 1rem;
         }
 
         &__scroll-section-mobile {
@@ -590,6 +617,13 @@
 
         &__middle-section_soc-links {
             gap: 0.5rem;
+        }
+
+        &__scroll-section-mobile {
+
+            .header__active-link {
+                @include size(1.5rem);
+            }
         }
 
     }

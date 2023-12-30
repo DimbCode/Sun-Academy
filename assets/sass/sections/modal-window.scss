@@ -361,6 +361,7 @@
         right: 1.25rem;
         color: #5516A6;
         filter: drop-shadow(1px 1px 4px rgba(91, 0, 163, 0.5));
+        z-index: 1;
     }
 
     &__section-title {
@@ -371,7 +372,7 @@
         text-fill-color: transparent;
         filter: drop-shadow(0px 2px 2px rgba(175, 0, 221, 0.55));
         -webkit-text-stroke: 0.5px rgba(28, 32, 78, 1);
-        font-size: 1.0625rem;
+        font-size: 1.5rem;
         font-weight: $bold;
         letter-spacing: 0.04125rem;
         margin-bottom: 0.5rem;
@@ -406,6 +407,7 @@
     &__list-link {
         color: $primaryColor;
         filter: drop-shadow(1px 1px 4px $gray1);
+        font-size: 1.25rem;
 
         &_drop-down {
             @extend %icon-text;
@@ -419,6 +421,21 @@
             }
         }
     }
+
+    &__nested-list {
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__nested-list-link {
+        color: $primaryColor;
+        filter: drop-shadow(1px 1px 4px $gray1);
+        font-size: 1.25rem;
+    }
+
 }
 
 .drop-down-list {

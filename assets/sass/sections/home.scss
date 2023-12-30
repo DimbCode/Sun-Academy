@@ -631,7 +631,14 @@
         }
 
         &__header-section_count {
-            display: none;
+            position: static;
+            transform: translate(0, 0);
+        }
+
+        &__header {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
         }
     }
 

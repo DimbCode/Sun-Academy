@@ -13,7 +13,7 @@ const overLinks = document.querySelectorAll(".home .drop-down-list_over .drop-do
 // Modal Windows Variables
 
 const modalButtons = document.querySelectorAll("button[data-modal]");
-const modalWindows = document.querySelectorAll("div[data-modal]");
+const modalWindows = document.querySelectorAll("div[data-modal], aside[data-modal]");
 
 // Carts Variables
 
@@ -29,12 +29,15 @@ const filterButtons = document.querySelectorAll(".modal-window__filter-btn");
 
 // System Variables
 
-const headerHeight = document.querySelector(".header").offsetHeight + parseFloat(getComputedStyle(document.querySelector(".wrapper")).gap);
+const headerHeight = document.querySelector(".header__middle").offsetHeight + parseFloat(getComputedStyle(document.querySelector(".wrapper")).gap);
 const headerHeight2 = document.querySelector(".header__middle_scroll").offsetHeight;
 const wrapperHeight = document.querySelector(".wrapper__container").offsetTop;
 const wrapper = document.querySelector(".wrapper__wrapper");
 const sidePanel = document.querySelector(".side-panel");
 const scrollHeader = document.querySelector(".header__middle_scroll");
+const scrollBtn = document.querySelector(".scroll-up-btn");
+
+sidePanel.style.maxHeight = document.documentElement.offsetHeight - scrollHeader.offsetHeight + "px";
 
 window.addEventListener("scroll", () => {
     if (document.documentElement.scrollTop > headerHeight) {
@@ -46,13 +49,23 @@ window.addEventListener("scroll", () => {
     if (document.documentElement.scrollTop >= wrapperHeight) {
         sidePanel.style.top = headerHeight2 + "px";
     }   else {
-        sidePanel.style.top = 20 + "px";
+        // sidePanel.style.top = 100 + "px";
+    }
+
+    if (document.documentElement.scrollTop >= 10) {
+        scrollBtn.classList.remove("none");
+    }   else {
+        scrollBtn.classList.add("none");
     }
 });
 
 // System Variables
 
 const resolve = document.documentElement.offsetWidth;
+
+if (resolve <= 500) {
+    sidePanel.classList.add("none");
+}
 
 // Functions
 

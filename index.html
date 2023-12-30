@@ -57,7 +57,7 @@
                     <div class="header__top-section header__top-section_mobile-actions header__mobile-block">
                         <div class="flex header__middle-section header__middle-section_soc-links">
 
-                            <button class="ic-filter header__active-link header__active-link_filters" data-modal="filters"></button>
+                            <button class="ic-filter header__active-link header__active-link_filters" data-modal="side-panel"></button>
                             <button class="ic-follow header__active-link header__active-link_follow"></button>
                             <div class="header__active-link-wrapper">
                                 <button class="ic-fill-heart-2 header__active-link header__active-link_heart"></button>
@@ -631,10 +631,6 @@
                     <div class="container header__scroll-section-mobile">
 
                         <div class="flex header__top">
-
-                            <div class="header__top-section">
-                                <a href="#" class="logo header__logo"></a>
-                            </div>
         
                             <div class="flex header__top-section header__top-section_soc-links header__desktop-block">
                                 <a href="#" class="ic-vk header__soc-link"></a>
@@ -665,7 +661,7 @@
                             <div class="header__top-section header__top-section_mobile-actions header__mobile-block">
                                 <div class="flex header__middle-section header__middle-section_soc-links">
         
-                                    <button class="ic-filter header__active-link header__active-link_filters" data-modal="filters"></button>
+                                    <button class="ic-filter header__active-link header__active-link_filters" data-modal="side-panel"></button>
                                     <button class="ic-follow header__active-link header__active-link_follow"></button>
                                     <div class="header__active-link-wrapper">
                                         <button class="ic-fill-heart-2 header__active-link header__active-link_heart"></button>
@@ -708,7 +704,9 @@
 
                 <!-- Side Panel -->
 
-                <aside class="side-panel">
+                <aside class="side-panel" data-modal="side-panel">
+                    <button class="ic-skip side-panel__skip-btn" data-modal="main"></button>
+                    
                     <nav class="side-panel__navigation">
                         <ul class="side-panel__link-list">
                             <li class="side-panel__link-item">
@@ -1150,7 +1148,7 @@
 
                                 <!-- Home Item -->
 
-                                <article class="service service_sale">
+                                <article class="service">
 
                                     <div class="service__section-wrapper">
 
@@ -2733,175 +2731,165 @@
                                     О проекте
                                 </button>
 
-                                <div class="drop-down-list none">
-                                    <ul class="drop-down-list__list">
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №1
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №2
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №3
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №2
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №3
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="drop-down__nested-list none">
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="drop-down__list-item">
                                 <button href="#" class="ic-drop-down drop-down__list-link drop-down__list-link_drop-down drop-down-btn">
                                     Статьи
                                 </button>
 
-                                <div class="drop-down-list none">
-                                    <ul class="drop-down-list__list">
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №1
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №2
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №3
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №2
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №3
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="drop-down__nested-list none">
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="drop-down__list-item">
                                 <button href="#" class="ic-drop-down drop-down__list-link drop-down__list-link_drop-down drop-down-btn">
                                     Коды Света
                                 </button>
 
-                                <div class="drop-down-list none">
-                                    <ul class="drop-down-list__list">
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №1
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №2
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №3
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №2
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №3
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="drop-down__nested-list none">
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="drop-down__list-item">
                                 <button href="#" class="ic-drop-down drop-down__list-link drop-down__list-link_drop-down drop-down-btn">
                                     Обучение
                                 </button>
 
-                                <div class="drop-down-list none">
-                                    <ul class="drop-down-list__list">
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №1
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №2
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №3
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №2
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №3
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="drop-down__nested-list none">
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="drop-down__list-item">
                                 <button href="#" class="ic-drop-down drop-down__list-link drop-down__list-link_drop-down drop-down-btn">
                                     Отзывы
                                 </button>
 
-                                <div class="drop-down-list none">
-                                    <ul class="drop-down-list__list">
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №1
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №2
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №3
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №2
-                                            </a>
-                                        </li>
-                                        <li class="drop-down-list__item">
-                                            <a href="#" class="drop-down-list__link">
-                                                Текст №3
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="drop-down__nested-list none">
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                    <li class="drop-down__nested-list-item">
+                                        <a href="#" class="drop-down__nested-list-link">
+                                            Текст №1
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </nav>
@@ -2972,6 +2960,12 @@
         </div>
 
         <!-- Drop Down End -->
+
+        <!-- Scroll-up Btn -->
+
+        <a href="#" class="ic-scrollup scroll-up-btn none"></a>
+
+        <!-- Scroll-up Btn End -->
 
     </div>
 
