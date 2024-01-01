@@ -584,11 +584,6 @@ a, button {
   .wrapper {
     gap: 1rem;
   }
-}
-@media all and (max-width: 768px) {
-  .service__section-wrapper {
-    pointer-events: none;
-  }
   .wrapper {
     gap: 1rem;
   }
@@ -596,11 +591,6 @@ a, button {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 1.56rem;
-  }
-  .side-panel {
-    position: static !important;
-    top: 0;
-    left: 0;
   }
 }
 .container {
@@ -1264,6 +1254,38 @@ a, button {
   .header__scroll-section-mobile .header__active-link::after {
     font-size: 1.5rem !important;
   }
+  .header__top-section_mobile-actions {
+    width: 100%;
+  }
+  .header__scroll-section-mobile, .header__middle-section {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header__scroll-section-mobile .header__active-link::after, .header__middle-section .header__active-link::after {
+    font-size: 2rem !important;
+  }
+  .header__scroll-section-mobile .header__search-btn::after, .header__middle-section .header__search-btn::after {
+    font-size: 1.5rem !important;
+  }
+  .header__scroll-section-mobile .header__middle-section, .header__middle-section .header__middle-section {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header__scroll-section-mobile .header__top-section_mobile-actions, .header__middle-section .header__top-section_mobile-actions {
+    width: 100%;
+  }
+}
+@media all and (max-width: 500px) {
+  .header__middle-section .header__active-link::after {
+    font-size: 1.5rem !important;
+  }
+  .header__middle-section .header__search-btn::after {
+    font-size: 1.5rem !important;
+  }
 }
 .side-panel {
   width: 100%;
@@ -1447,7 +1469,7 @@ a, button {
     margin-top: 0;
   }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 850px) {
   .side-panel {
     max-height: 100% !important;
     height: 100%;
@@ -2035,7 +2057,7 @@ a, button {
     grid-template-columns: 1fr;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 850px) {
   .home__items {
     display: -ms-grid;
     display: grid;

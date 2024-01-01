@@ -13,7 +13,7 @@ const overLinks = document.querySelectorAll(".home .drop-down-list_over .drop-do
 // Modal Windows Variables
 
 const modalButtons = document.querySelectorAll("button[data-modal]");
-const modalWindows = document.querySelectorAll("div[data-modal], aside[data-modal]");
+let modalWindows = document.querySelectorAll("div[data-modal], aside[data-modal]");
 
 // Carts Variables
 
@@ -63,9 +63,12 @@ window.addEventListener("scroll", () => {
 
 const resolve = document.documentElement.offsetWidth;
 
-if (resolve <= 500) {
+if (resolve <= 850) {
+    sidePanel.setAttribute("data-modal", "side-panel");
     sidePanel.classList.add("none");
 }
+
+modalWindows = document.querySelectorAll("div[data-modal], aside[data-modal]");
 
 // Functions
 
@@ -170,6 +173,13 @@ if (resolve <= 768) {
         });
     });
 
+    dropDowns.forEach(item => {
+        item.addEventListener("click", (event) => {
+            const dropDown = event.currentTarget.nextElementSibling;
+            toggleDropDown(dropDown, event.currentTarget, "active-btn");
+        });
+    });
+
 }   else {
     let dropDownLists = document.querySelectorAll(".drop-down-list_over");
 
@@ -178,6 +188,7 @@ if (resolve <= 768) {
     overDropDowns.forEach(item => {
         item.addEventListener("mouseenter", (event) => {
             const dropDown = event.currentTarget.nextElementSibling;
+
             openDropDown(dropDown, event.currentTarget, "active-btn");
         });
     });
@@ -187,10 +198,11 @@ if (resolve <= 768) {
             const dropDown = event.currentTarget.nextElementSibling;
             const currentBtn = event.currentTarget;
 
-            if (dropDown.getAttribute("data-open") == "false") {
-                hiddenDropDown(dropDown, currentBtn, "active-btn");
-            }
-            
+            setTimeout(() => {
+                if (dropDown.getAttribute("data-open") == "false") {
+                    hiddenDropDown(dropDown, currentBtn, "active-btn");
+                }
+            }, 200);
         });
     });
 
@@ -199,7 +211,6 @@ if (resolve <= 768) {
             const currentBtn = event.currentTarget.closest(".drop-down-list").previousElementSibling;
             
             event.currentTarget.setAttribute("data-open", "true");
-            openDropDown(event.currentTarget, currentBtn, "active-btn");
         });
     })
 
@@ -212,8 +223,6 @@ if (resolve <= 768) {
         });
     })
 }
-
-
 
 // Modal Windows Events
 

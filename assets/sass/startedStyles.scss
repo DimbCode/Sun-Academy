@@ -111,14 +111,6 @@ a, button {
         gap: 1rem;
     }
 
-}
-
-@media all and (max-width: 768px) {
-
-    .service__section-wrapper {
-        pointer-events: none;
-    }
-
     .wrapper {
         gap: 1rem;
 
@@ -126,12 +118,6 @@ a, button {
             grid-template-columns: 1fr;
             gap: 1.56rem;
         }
-    }
-
-    .side-panel {
-        position: static !important;
-        top: 0;
-        left: 0;
     }
 
 }
