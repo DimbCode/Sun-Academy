@@ -347,6 +347,7 @@
         background: $white;
         padding: 1rem;
         position: relative;
+        overflow: auto;
 
         & > *:not(:last-child) {
             margin-bottom: 1rem;

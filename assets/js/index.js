@@ -70,6 +70,11 @@ if (resolve <= 850) {
 
 modalWindows = document.querySelectorAll("div[data-modal], aside[data-modal]");
 
+// const headerSlider = new Swiper(".header__bottom-list-wrapper", {
+//     slidesPerView: 8,
+//     spaceBetween: 48,
+// });
+
 // Functions
 
 function toggleDropDown(elem, currentEl, activeCl) {
