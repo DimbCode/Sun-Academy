@@ -37,13 +37,13 @@ const sidePanel = document.querySelector(".side-panel");
 const scrollHeader = document.querySelector(".header__middle_scroll");
 const scrollBtn = document.querySelector(".scroll-up-btn");
 
-sidePanel.style.maxHeight = document.documentElement.offsetHeight - scrollHeader.offsetHeight + "px";
-
 window.addEventListener("scroll", () => {
     if (document.documentElement.scrollTop > headerHeight) {
         scrollHeader.classList.remove("none");
+        sidePanel.style.maxHeight = document.documentElement.offsetHeight - scrollHeader.offsetHeight + "px";
     }   else {
         scrollHeader.classList.add("none");
+        sidePanel.style.maxHeight = "100vh";
     }
 
     if (document.documentElement.scrollTop >= wrapperHeight) {
@@ -144,7 +144,7 @@ dropDowns.forEach(item => {
     item.addEventListener("click", (event) => {
         let dropDown = event.currentTarget.nextElementSibling;
 
-        if (event.currentTarget.classList.contains("side-panel__link-drop-down-item")) {
+        if (event.currentTarget.classList.contains("side-panel__link-drop-down-item") || event.currentTarget.classList.contains("side-panel-mobile__link-drop-down-item")) {
             dropDown = event.currentTarget.parentElement.nextElementSibling;
             toggleDropDown(dropDown, event.currentTarget.parentElement, "active-btn");
         }   else {
@@ -178,12 +178,20 @@ if (resolve <= 768) {
         });
     });
 
-    dropDowns.forEach(item => {
-        item.addEventListener("click", (event) => {
-            const dropDown = event.currentTarget.nextElementSibling;
-            toggleDropDown(dropDown, event.currentTarget, "active-btn");
-        });
-    });
+    // dropDowns.forEach(item => {
+    //     item.addEventListener("click", (event) => {
+    //         let dropDown = event.currentTarget.nextElementSibling;
+
+    //         if (event.currentTarget.classList.contains("side-panel__link-drop-down-item") || event.currentTarget.classList.contains("side-panel-mobile__link-drop-down-item")) {
+    //             dropDown = event.currentTarget.parentElement.nextElementSibling;
+    //             toggleDropDown(dropDown, event.currentTarget.parentElement, "active-btn");
+    //         }   else {
+    //             toggleDropDown(dropDown, event.currentTarget, "active-btn");
+    //         }
+
+    //         console.log("f")
+    //     });
+    // });
 
 }   else {
     let dropDownLists = document.querySelectorAll(".drop-down-list_over");

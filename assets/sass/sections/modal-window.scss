@@ -162,6 +162,10 @@
             }
         }
 
+        .noUi-handle-upper {
+            right: -0.5rem;
+        }
+
         .noUi-base {
             background: linear-gradient(90deg, rgba(0, 93, 204, 1), rgba(136, 0, 199, 1));
             border-radius: 2rem;
@@ -345,7 +349,7 @@
         height: 100%;
         width: 50%;
         background: $white;
-        padding: 1rem;
+        padding: 4rem 1rem 1rem 1rem;
         position: relative;
         overflow: auto;
 
@@ -714,7 +718,7 @@
 
         &__section-title {
             margin-bottom: 1rem;
-            font-size: 1rem;
+            font-size: 1.1rem;
             gap: 0.25rem;
             @include size(1.7rem);
         }
@@ -730,8 +734,9 @@
         }
         
         &__filter-btn {
-            font-size: 0.8rem;
+            font-size: 1rem;
             padding: 0.3rem 1rem;
+            border-radius: 0.55rem;
         }
 
     }

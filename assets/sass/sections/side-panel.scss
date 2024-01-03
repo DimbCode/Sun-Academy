@@ -2,6 +2,7 @@
 
 .side-panel,
 .side-panel-mobile {
+    max-height: 100vh;
     width: 100%;
     overflow: auto;
     padding-right: 1.8rem;
@@ -67,7 +68,8 @@
             //     -webkit-text-fill-color: transparent;
             // }
 
-            &.active-btn .side-panel__link-drop-down-item::after {
+            &.active-btn .side-panel__link-drop-down-item::after,
+            &.active-btn .side-panel-mobile__link-drop-down-item::after {
                 transform: translate(-50%, -50%) rotate(180deg);
             }
         }
@@ -219,8 +221,6 @@
 
     .side-panel,
     .side-panel-mobile {
-
-        max-height: 100% !important;
         height: 100%;
         position: fixed !important;
         top: 0 !important;
@@ -236,11 +236,16 @@
 }
 
 .side-panel-mobile {
+    max-height: auto !important;
     height: auto !important;
     width: auto !important;
     padding-right: 1rem;
-    padding-left: 0;
+    padding-left: 0.5rem;
     position: static !important;
     left: 0;
     top: 0;
+
+    &__link-list {
+        padding: 0 0 0.5rem 0;
+    }
 }
