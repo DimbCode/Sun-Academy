@@ -29,13 +29,19 @@ const filterButtons = document.querySelectorAll(".modal-window__filter-btn");
 
 // System Variables
 
-const headerHeight = document.querySelector(".header__middle").offsetHeight + parseFloat(getComputedStyle(document.querySelector(".wrapper")).gap);
+const wrapperGap = parseFloat(getComputedStyle(document.querySelector(".wrapper")).gap);
+const headerHeight = document.querySelector(".header__middle").offsetHeight + wrapperGap;
 const headerHeight2 = document.querySelector(".header__middle_scroll").offsetHeight;
+const headerHeight3 = document.querySelector(".header").offsetHeight;
 const wrapperHeight = document.querySelector(".wrapper__container").offsetTop;
 const wrapper = document.querySelector(".wrapper__wrapper");
 const sidePanel = document.querySelector(".side-panel");
 const scrollHeader = document.querySelector(".header__middle_scroll");
 const scrollBtn = document.querySelector(".scroll-up-btn");
+
+console.log(document.documentElement.offsetHeight);
+
+sidePanel.style.maxHeight = document.documentElement.offsetHeight - (headerHeight3 + wrapperGap) + "px";
 
 window.addEventListener("scroll", () => {
     if (document.documentElement.scrollTop > headerHeight) {
@@ -43,13 +49,13 @@ window.addEventListener("scroll", () => {
         sidePanel.style.maxHeight = document.documentElement.offsetHeight - scrollHeader.offsetHeight + "px";
     }   else {
         scrollHeader.classList.add("none");
-        sidePanel.style.maxHeight = "100vh";
+        sidePanel.style.maxHeight = document.documentElement.offsetHeight - (headerHeight3 + wrapperGap) + "px";
     }
 
     if (document.documentElement.scrollTop >= wrapperHeight) {
         sidePanel.style.top = headerHeight2 + "px";
     }   else {
-        // sidePanel.style.top = 100 + "px";
+        sidePanel.style.top = 100 + "px";
     }
 
     if (document.documentElement.scrollTop >= 10) {
