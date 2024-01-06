@@ -39,8 +39,6 @@ const sidePanel = document.querySelector(".side-panel");
 const scrollHeader = document.querySelector(".header__middle_scroll");
 const scrollBtn = document.querySelector(".scroll-up-btn");
 
-console.log(document.documentElement.offsetHeight);
-
 sidePanel.style.maxHeight = document.documentElement.offsetHeight - (headerHeight3 + wrapperGap) + "px";
 
 window.addEventListener("scroll", () => {
@@ -75,11 +73,6 @@ if (resolve <= 850) {
 }
 
 modalWindows = document.querySelectorAll("div[data-modal], aside[data-modal]");
-
-// const headerSlider = new Swiper(".header__bottom-list-wrapper", {
-//     slidesPerView: 8,
-//     spaceBetween: 48,
-// });
 
 // Functions
 
@@ -184,20 +177,18 @@ if (resolve <= 768) {
         });
     });
 
-    // dropDowns.forEach(item => {
-    //     item.addEventListener("click", (event) => {
-    //         let dropDown = event.currentTarget.nextElementSibling;
+    dropDowns.forEach(item => {
+        item.addEventListener("click", (event) => {
+            let dropDown = event.currentTarget.nextElementSibling;
 
-    //         if (event.currentTarget.classList.contains("side-panel__link-drop-down-item") || event.currentTarget.classList.contains("side-panel-mobile__link-drop-down-item")) {
-    //             dropDown = event.currentTarget.parentElement.nextElementSibling;
-    //             toggleDropDown(dropDown, event.currentTarget.parentElement, "active-btn");
-    //         }   else {
-    //             toggleDropDown(dropDown, event.currentTarget, "active-btn");
-    //         }
-
-    //         console.log("f")
-    //     });
-    // });
+            if (event.currentTarget.classList.contains("side-panel__link-drop-down-item") || event.currentTarget.classList.contains("side-panel-mobile__link-drop-down-item")) {
+                dropDown = event.currentTarget.parentElement.nextElementSibling;
+                toggleDropDown(dropDown, event.currentTarget.parentElement, "active-btn");
+            }   else {
+                toggleDropDown(dropDown, event.currentTarget, "active-btn");
+            }
+        });
+    });
 
 }   else {
     let dropDownLists = document.querySelectorAll(".drop-down-list_over");

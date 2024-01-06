@@ -1054,7 +1054,7 @@ a, button {
   padding-bottom: 0.5rem;
 }
 .header__bottom-list_mobile {
-  gap: 0;
+  gap: 0 !important;
 }
 .header__bottom-list-link {
   color: #250055;
